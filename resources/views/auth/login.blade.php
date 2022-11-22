@@ -41,6 +41,7 @@
                     <button type="submit" class="btn btn-primary">Connection</button>
                 </form>
             </div>
+
             {{-- Error handling --}}
             @if(!$errors->isEmpty())
                 <div class="m-3 d-flex justify-content-center">
