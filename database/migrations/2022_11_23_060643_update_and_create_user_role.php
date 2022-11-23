@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('phone',12);
             $table->boolean('status')->comment('status of user for dealt account');
             $table->boolean('banish')->comment('if true user is banish of forum');
+            $table->unsignedBigInteger('role_id');
             $table->foreign('role_id')
                 ->references('id')
                 ->on('roles')->cascadeOnUpdate();
