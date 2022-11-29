@@ -1,4 +1,11 @@
-import './bootstrap';
+/*****************************
+* Import CSS */
 import '../css/app.css';
-import '../js/bootstrap/bootstrap.bundle';
+
+
+/****************************
+ * Import JS General */
+import './bootstrap';
+import './bootstrap/bootstrap.bundle';
+import './auth/register';
 

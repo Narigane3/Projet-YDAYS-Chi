@@ -28,6 +28,7 @@
 </div>
 </body>
 <footer>
-
+    @section('footer')
+    @show
 </footer>
 </html>
