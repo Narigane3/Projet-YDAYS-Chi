@@ -12,6 +12,8 @@ return new class extends Migration {
      */
     public function up()
     {
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('roles');
         Schema::create('roles', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->char('libelle', 50)->comment('name of role');
