@@ -1,3 +1,18 @@
-html{
-
+/* Menu panel admin */
+#admin_menu {
+    height: 100vh;
+    background-color: #E6DBD7;
 }
+
+img#logo_menu {
+    height: auto;
+    width: 5vw;
+}
+
+a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none {
+    margin: 0 auto;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link:active{
+    background-color: #5D858A;
+}
+/*--------------------*/
