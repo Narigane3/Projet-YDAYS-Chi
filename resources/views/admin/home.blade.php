@@ -41,7 +41,7 @@
             </div>
 
             <div>
-                <a href="#" class="btn p-0 m-0">
+                <a href="/admin/user" class="btn p-0 m-0">
                     <div
                         class="card menu_tuile d-flex justify-content-center text-white flex-column align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
