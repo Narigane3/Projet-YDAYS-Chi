@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {{-- Not index this page form Google --}}
+    <meta name="robot" content="noindex">
+
     <title>Chi - @yield('title')</title>
     <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css%22%3E">
     @vite('resources/js/app.js')
