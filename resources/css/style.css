@@ -39,9 +39,9 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
  */
 
 .menu_tuile {
-    height: 40vh;
+    height: 130px;
     text-align: center;
-    width: 70vw;
+    width: 200px;
     gap: 1rem;
     border-radius: 5px;
     background-color: #9CB9BE;
@@ -51,8 +51,8 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
 }
 
 .menu_tuile svg {
-    height: 10vh;
-    width: 10vw;
+    height: 50px;
+    width: 50px;
 }
 
 /* Media Tablette */
@@ -64,9 +64,10 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
     .menu_tuile {
         height: 15vw;
         width: 15vw;
+        gap: 0;
     }
     .menu_tuile svg {
-        height: 16vh;
+        height: 80px;
         width: 5vw;
     }
 
