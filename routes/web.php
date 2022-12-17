@@ -21,5 +21,5 @@ Route::get('/admin',function (){
     return view('admin.home');
 });
 Route::get('/admin/user',function (){
-    return view('admin.user');
+    return view('admin.user.user_manager');
 });
