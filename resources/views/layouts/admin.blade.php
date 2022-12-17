@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chi - @yield('title')</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css%22%3E">
     @vite('resources/js/app.js')
     @section('head')
     @show
@@ -15,7 +16,7 @@
 <div class="wrapper">
     @section('navbar')
         <nav>
-            <ul class="nav justify-content-start pt-3 ps-5">
+            <ul class="nav justify-content-start pt-1 pb-1 ps-2 ps-md-3">
                 <li class="nav-item">
                     <a type="button" data-bs-toggle="offcanvas" data-bs-target="#admin_menu"
                        aria-controls="offcanvasRight">
@@ -32,7 +33,7 @@
         <!-- Sidebar -->
         <div class="d-flex flex-column flex-shrink-0 p-3 offcanvas offcanvas-start" id="admin_menu"
              style="width: 280px;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <a href="/" class="d-flex align-items-center mb-md-0 link-dark text-decoration-none">
                 <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="logo_menu">
             </a>
             <hr>
