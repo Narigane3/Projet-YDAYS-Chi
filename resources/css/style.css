@@ -1,18 +1,78 @@
-/* Menu panel admin */
+html{
+    color: #1D1D1B;
+    font-family: 'kapelka-new', serif;
+}
+/* Titre */
+h5{
+    font-size: 1rem;
+}
+
+/***************
+ Menu panel admin
+ ***************/
+nav{
+    background-color: #E6DBD7;
+}
+
 #admin_menu {
     height: 100vh;
     background-color: #E6DBD7;
 }
-
 img#logo_menu {
     height: auto;
-    width: 5vw;
+    width: 85px;
+    margin: auto;
 }
+
+
 
 a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none {
     margin: 0 auto;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link:active{
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link:active {
     background-color: #5D858A;
 }
-/*--------------------*/
+
+/************************
+    Tuile Menu
+ */
+
+.menu_tuile {
+    height: 40vh;
+    text-align: center;
+    width: 70vw;
+    gap: 1rem;
+    border-radius: 5px;
+    background-color: #9CB9BE;
+}
+.menu_tuile:hover{
+    background-color: #5D858A;
+}
+
+.menu_tuile svg {
+    height: 10vh;
+    width: 10vw;
+}
+
+/* Media Tablette */
+@media (min-width: 768px) {
+    h5{
+        font-size: 0.8rem;
+    }
+    /*Menu sidebar*/
+    .menu_tuile {
+        height: 15vw;
+        width: 15vw;
+    }
+    .menu_tuile svg {
+        height: 16vh;
+        width: 5vw;
+    }
+
+}
+/* Media Desktop */
+@media (min-width: 900px) {
+    /*Menu sidebar*/
+
+}
