@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="alert-info m-3 p-3">
-                        L'ensembles des information si dessus ne seront pas rendu public
+                        L'ensemble des informations ci dessus ne seront pas rendu publique
                     </div>
                     <hr>
                     <div class="row mb-3">
