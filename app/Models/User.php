@@ -47,4 +47,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /** Table of this model
+     * @var string
+     */
+    protected $table ="users";
+
+    /**
+     * Get the role associated with user
+     */
+    public function role()
+    {
+        return $this->belongsTo(Roles::class);
+    }
+
 }
