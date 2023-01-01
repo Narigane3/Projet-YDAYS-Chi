@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,4 @@ Route::get('/', function () {
 Route::get('/admin',function (){
     return view('admin.home');
 });
-Route::get('/admin/user',function (){
-    return view('admin.user.user_manager');
-});
+Route::get('/admin/user',[UserController::class,'index']);
