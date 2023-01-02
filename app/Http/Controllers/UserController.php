@@ -12,7 +12,7 @@ class UserController extends Controller
      * @return View
      */
     public function index(){
-        return view('admin.user.user_manager',[
+        return view('admin.user.index',[
             'users'=> User::all()->where('status',"=",'1')
         ]);
     }
