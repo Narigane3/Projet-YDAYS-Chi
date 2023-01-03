@@ -23,7 +23,7 @@
                         </svg></span>
                     Retour
                 </a>
-                <a class="btn btn-outline-primary" id="add_user">Ajouter
+                <a class="btn btn-outline-primary" href="/admin/user/create" id="add_user">Ajouter
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-person-add" viewBox="0 0 16 16">
                         <path
@@ -58,7 +58,7 @@
                         <td>
                             <div class="d-flex justify-content-end">
                                 <div class="px-3">
-                                    <a href="#" class="edite_user">
+                                    <a href="admin/user/edite/{{$user['id']}}" class="edite_user">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor"
                                              class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -70,7 +70,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="#" class="remove_user">
+                                    <a href="#" @click="" class="remove_user">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor"
                                              class="bi bi-trash" viewBox="0 0 16 16">

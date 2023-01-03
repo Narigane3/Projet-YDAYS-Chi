@@ -16,4 +16,13 @@ class UserController extends Controller
             'users'=> User::all()->where('status',"=",'1')
         ]);
     }
+
+    /**
+     * Display view for create new user
+     * @return View
+     */
+    public function creat(){
+        return view('admin.user.gestion');
+    }
+
 }

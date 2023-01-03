@@ -21,4 +21,7 @@ Route::get('/', function () {
 Route::get('/admin',function (){
     return view('admin.home');
 });
+
+
 Route::get('/admin/user',[UserController::class,'index']);
+Route::get('/admin/user/create',[UserController::class,'creat']);
