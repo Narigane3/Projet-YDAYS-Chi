@@ -8,4 +8,4 @@ import '../css/app.css';
 import './bootstrap';
 import './bootstrap/bootstrap.bundle';
 import './auth/register';
-
+import './admin/user/user_gestion'
