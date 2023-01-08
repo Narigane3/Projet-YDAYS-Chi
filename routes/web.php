@@ -22,6 +22,7 @@ Route::get('/admin',function (){
     return view('admin.home');
 });
 
-
-Route::get('/admin/user',[UserController::class,'index']);
-Route::get('/admin/user/create',[UserController::class,'creat']);
+// USER MANGER
+Route::get('/admin/users',[UserController::class,'index']);
+Route::get('/admin/users/create',[UserController::class,'creat']);
+Route::post('/admin/user/create',[UserController::class,'store']);
