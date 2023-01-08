@@ -395,12 +395,11 @@
                 <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Accueil</a>
                 <span id="logout">
                       {{-- Form de logout --}}
-                <form action="/logout" method="POST" ref="form" class="d-inline">
+                <form @submit.prevent="logout" action="/logout" method="POST" ref="form" class="d-inline">
                     @csrf
                     <input type="hidden" value="{{ route('logout') }}">
-                     <a href="{{route('logout')}}"
-                        class="text-sm text-gray-700 dark:text-gray-500 underline" @click="logout">Se déconnecter</a>
-
+                     <input type="submit" class="text-sm text-gray-700 dark:text-gray-500 underline" style="background: none" value="Se déconnecter">
+                </form>
                 </span>
             @else
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>

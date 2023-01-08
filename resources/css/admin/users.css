@@ -1,0 +1,21 @@
+#user_table{
+    background-color: #D7534B;
+    color: white;
+}
+
+.edite_user{
+    color: #5D858A;
+}
+.remove_user{
+    color: #D7534B;
+}
+
+#add_user{
+    border-color: #5D858A;
+    color: #5D858A;
+}
+#add_user:hover{
+    background-color: #5D858A;
+    color: white;
+}
+
