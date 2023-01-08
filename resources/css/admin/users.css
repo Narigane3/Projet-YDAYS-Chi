@@ -19,3 +19,19 @@
     color: white;
 }
 
+.btn_custom{
+    background-color: #5D858A;
+    border-color: #5D858A;
+}
+
+/* Custom Button */
+.btn.btn-primary.back_btn {
+    background-color: #5D858A;
+    border-color: #5D858A;
+}
+
+.btn.btn-primary.back_btn:hover {
+    color: #5D858A;
+    background-color: white;
+    border-color: #5D858A;
+}

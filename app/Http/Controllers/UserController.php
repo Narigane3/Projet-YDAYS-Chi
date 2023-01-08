@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
@@ -29,13 +30,21 @@ class UserController extends Controller
         return view('admin.user.gestion');
     }
 
+    public function edit(int $user_id): view|Application
+    {
+        $userModel = new User();
+        $user = $userModel->getUserById($user_id);
+
+        return view('admin.user.gestion', ['user' => $user]);
+    }
+
     /**
      * Store the new user in DB
      */
     public function store(Request $request): View
     {
 
-        $validated = $request->validate([
+        $request->validate([
             'firstname' => 'required | max:150 | string',
             'lastname' => 'required | max:150 | string',
             'username' => 'required | unique:users|max:255 | string',

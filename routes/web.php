@@ -25,4 +25,6 @@ Route::get('/admin',function (){
 // USER MANGER
 Route::get('/admin/users',[UserController::class,'index']);
 Route::get('/admin/users/create',[UserController::class,'creat']);
+Route::get('/admin/users/edit/{user_id}',[UserController::class,'edit']);
+
 Route::post('/admin/user/create',[UserController::class,'store']);

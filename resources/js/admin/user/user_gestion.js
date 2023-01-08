@@ -5,8 +5,8 @@ createApp({
     data() {
         return {
             password: '',
-            conf_password:''
+            password_confirmation:''
         }
     }
 
-}).mount('#user_gest')
+}).mount('#user_gestion')
