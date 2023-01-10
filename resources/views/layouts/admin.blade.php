@@ -15,7 +15,7 @@
 <body>
 <div class="wrapper">
     @section('navbar')
-        <nav>
+        <nav id="nav_admin">
             <ul class="nav justify-content-start pt-1 pb-1 ps-2 ps-md-3">
                 <li class="nav-item">
                     <a type="button" data-bs-toggle="offcanvas" data-bs-target="#admin_menu"

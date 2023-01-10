@@ -18,7 +18,7 @@
                     Retour
                 </a>
                 <a class="btn btn-outline-primary" href="/admin/users/create" id="add_user">Ajouter
-                        <i class="bi bi-person-add"></i>
+                    <i class="bi bi-person-add"></i>
                 </a>
             </div>
 
@@ -38,15 +38,17 @@
                 <tbody>
                 @foreach($users as $user)
                     <tr>
-                        <td>{{$user['firstname']}}</td>
-                        <td>{{$user['lastname']}}</td>
-                        <td>{{$user['username']}}</td>
-                        <td>{{$user['email']}}</td>
-                        <td>{{$user['role']['libelle']}}</td>
+                        <td>{{$user->firstname}}</td>
+                        <td>{{$user->lastname}}</td>
+                        <td>{{$user->username}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->libelle}}</td>
+
                         <td>
                             <div class="d-flex justify-content-end">
+
                                 <div class="px-3">
-                                    <a href="/admin/users/edit/{{$user['id']}}" class="edite_user">
+                                    <a href="/admin/users/edit/{{$user->id}}" class="edite_user">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </div>
@@ -60,30 +62,12 @@
                     </tr>
                 @endforeach
 
-            </tbody>
-        </table>
-    </div>
-    <div class="d-flex justify-content-center justify-content-md-end">
-        <nav id="pagination">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link disable" href="#">Precedent</a>
-                </li>
-                <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Suivant</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-center justify-content-md-end mt-3 me-md-5">
+            {{ $users->links() }}
+        </div>
 
     </div>
 @stop

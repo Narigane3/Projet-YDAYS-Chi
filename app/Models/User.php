@@ -2,20 +2,27 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Foundation\Auth\User as Authenticate;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @method static create(array $array)
  */
-class User extends Authenticatable
+class User extends Authenticate
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    /** Table of this model
+     * @var string
+     */
+    protected $table = "users";
 
     /**
      * The attributes that are mass assignable.
@@ -51,17 +58,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /** Table of this model
-     * @var string
-     */
-    protected $table ="users";
-
     /**
      * Get the role associated with user
      */
-    public function role()
+    public function role(): BelongsTo
     {
         return $this->belongsTo(Roles::class);
+    }
+
+    /**
+     * Get all users and organize them by page
+     * @return LengthAwarePaginator
+     */
+    public function getAllUsers(): LengthAwarePaginator
+    {
+        return DB::table($this->table,'u')
+            ->join('roles', 'role_id', '=', 'roles.id')
+            ->where('u.status', "=", '1')
+            ->paginate(5);
     }
 
     /** Return data of user

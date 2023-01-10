@@ -16,9 +16,11 @@ class UserController extends Controller
      */
     public function index(): View
     {
-        return view('admin.user.index', [
-            'users' => User::all()->where('status', "=", '1')
-        ]);
+        $model = new User();
+
+        $users = $model->getAllUsers();
+
+        return view('admin.user.index', ['users' => $users]);
     }
 
     /**
