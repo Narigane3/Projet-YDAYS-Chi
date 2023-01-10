@@ -74,6 +74,9 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
     background-color: #5D858A;
     color: white;
 }
+.page-item.active .page-link{
+    border-color: #5D858A;
+}
 
 .page-item.disable .page-link {
 

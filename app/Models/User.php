@@ -72,7 +72,8 @@ class User extends Authenticate
      */
     public function getAllUsers(): LengthAwarePaginator
     {
-        return DB::table($this->table,'u')
+        return DB::table($this->table, 'u')
+            ->select(['u.id', 'u.firstname', 'u.lastname', 'u.username', 'u.email', 'roles.libelle'])
             ->join('roles', 'role_id', '=', 'roles.id')
             ->where('u.status', "=", '1')
             ->paginate(5);
