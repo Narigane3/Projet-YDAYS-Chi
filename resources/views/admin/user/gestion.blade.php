@@ -32,40 +32,40 @@
                             <label for="prenom">Prénom*</label>
                             <input type="text" class="form-control" placeholder="Prénom" name="firstname"
                                    id="prenom"
-                                   aria-label="prenom" value="{{old('firstname')}}{{$user->firstname??""}}">
+                                   aria-label="prenom" value="{{old('firstname')??$user->firstname??""}}">
                         </div>
                         <div class="col-12 col-md-4">
                             <label for="nom">Nom*</label>
                             <input type="text" class="form-control" placeholder="Nom" name="lastname"
                                    aria-label="nom"
-                                   id="nom" value="{{old('lastname')}}{{$user->lastname??""}}">
+                                   id="nom" value="{{old('lastname')??$user->lastname??""}}">
                         </div>
 
                         <div class="col-12 col-md-4">
                             <label for="username">Username*</label>
                             <input type="text" class="form-control" placeholder="Username" name="username"
-                                   id="username"
-                                   aria-label="username" value="{{old('username')}}{{$user->username??""}}">
+                                   id="username" @disabled(isset($user))
+                                   aria-label="username" value="{{old('username')??$user->username??""}}">
                         </div>
 
                         <div class="col col-md-4">
                             <label for="email">Email*</label>
                             <input type="email" class="form-control" placeholder="Email" name="email"
-                                   aria-label="email"
-                                   id="email" value= {{old('email')}}{{$user->email??""}}>
+                                   aria-label="email" @disabled(isset($user))
+                                   id="email" value= {{old('email')??$user->email??""}}>
                         </div>
+
                         <div class="col col-md-3">
                             <label for="tel">Téléphone</label>
                             <input type="text" class="form-control" placeholder="Numéro de téléphone"
                                    name="phone"
-                                   aria-label="tel" id="tel" value="{{old('phone')}}{{$user->phone??""}}">
+                                   aria-label="tel" id="tel" value="{{old('phone')??$user->phone??""}}">
                         </div>
-                        @if(!isset($user))
                             <div class="col col-md-4">
                                 <label for="password">Mots de passe*</label>
                                 <input v-model="password" type="password" class="form-control"
                                        placeholder="mots de passe"
-                                       name="password"
+                                       name="password" @disabled(isset($user))
                                        aria-label="password" id="password" required>
                             </div>
 
@@ -73,7 +73,7 @@
                                 <label for="password_confirmation">Confirmation*</label>
                                 <input v-model="password_confirmation" type="password" class="form-control"
                                        placeholder="Confirmation"
-                                       name="password_confirmation"
+                                       name="password_confirmation" @disabled(isset($user))
                                        aria-label="confirmation" id="password_confirmation" required>
                             </div>
                             <div v-if="password !== password_confirmation" class="col-12 alert alert-danger">
@@ -81,7 +81,6 @@
                                     identiques</p>
                             </div>
                             <div v-else></div>
-                        @endif
 
                         @if ($errors->any())
                             <div class="alert alert-danger col-12">
@@ -95,7 +94,6 @@
 
                     </div>
 
-
                     <div class="mb-3">
                         <div class="row">
                             <div class="col">
@@ -106,7 +104,7 @@
                                         <div>
                                             <input class="form-check-input me-2" type="radio"
                                                    name="role" id="admin"
-                                                   value="3" @checked($user->role_id??"" == 3) >
+                                                   value="3" @checked(isset($user) && $user->role_id == 3) >
                                             <label for="Admin" class="form-check-label">Admin</label>
                                         </div>
                                     @endif
@@ -114,14 +112,14 @@
                                     <div>
                                         <input class="form-check-input me-2" type="radio"
                                                name="role" id="edite"
-                                               value="2" @checked($user->role_id??"" == 2)>
+                                               value="2" @checked(isset($user) && $user->role_id == 2)>
                                         <label for="edite" class="form-check-label">Éditeur</label>
                                     </div>
 
                                     <div>
                                         <input class="form-check-input me-2" type="radio"
                                                name="role" id="user"
-                                               value="1" @checked($user->role_id??"" == 1 || !isset($user))>
+                                               value="1" @checked(!isset($user) || $user->role_id == 1 )>
                                         <label class="form-check-label" for="edite">Utilisateur</label>
                                     </div>
 

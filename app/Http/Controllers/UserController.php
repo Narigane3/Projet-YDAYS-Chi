@@ -43,8 +43,9 @@ class UserController extends Controller
     /**
      * Store the new user in DB
      */
-    public function store(Request $request): View
+    public function store(Request $request): string
     {
+        $userModel = new User();
 
         $request->validate([
             'firstname' => 'required | max:150 | string',
@@ -53,7 +54,7 @@ class UserController extends Controller
             'email' => 'required | unique:users| email | max:255',
             'password' => 'required|confirmed',
             'phone' => 'max:12 | string',
-            'role' => 'numeric |'
+            'role' => 'numeric'
         ]);
 
         // make hash of password
@@ -83,9 +84,41 @@ class UserController extends Controller
             'role_id' => $role
         ]);
 
-        return view('admin.user.index', [
-            'users' => User::all()->where('status', "=", '1')
+        return redirect('/admin/users');
+    }
+
+    public function update(Request $request, $user_id)
+    {
+        $model = new User();
+
+        $request->validate([
+            'firstname' => 'required | max:150 | string',
+            'lastname' => 'required | max:150 | string',
+            'phone' => 'max:12',
+            'role' => 'numeric'
         ]);
+
+        $role = 1;
+
+        switch ($request->input('role')) {
+            case '2':
+                $role = 2;
+                break;
+            case'3':
+                $role = 3;
+                break;
+            default:
+                break;
+        }
+
+        User::where('id', '=', $user_id)->update([
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'phone' => $request->input('phone') ?? "",
+            'role_id' => $role
+        ]);
+
+        return redirect('/admin/users');
     }
 
 }
