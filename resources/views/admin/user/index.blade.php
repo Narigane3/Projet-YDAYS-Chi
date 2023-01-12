@@ -34,17 +34,17 @@
                 <div>
                     <h1>Gestion des utilisateurs</h1>
                 </div>
-                <div class="mt-3">
+                <div class="mt-3 d-flex justify-content-between">
                     <a href="/admin" class="btn btn-primary back_btn">
                         <span><i class="bi bi-box-arrow-left"></i></span>
                         Retour
                     </a>
-                    <a class="btn btn-outline-primary" href="/admin/users/create" id="add_user">Ajouter
+                    <a class="btn btn-outline-primary ms-md-3" href="/admin/users/create" id="add_user">Ajouter
                         <i class="bi bi-person-add"></i>
                     </a>
                 </div>
             </div>
-            <div class="overflow-scroll">
+            <div class="overflow-auto">
                 <table class="table">
                     <thead class="" id="user_table">
                     <tr>
