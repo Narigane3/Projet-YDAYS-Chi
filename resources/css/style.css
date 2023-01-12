@@ -11,6 +11,7 @@ h5{
  Menu panel admin
  ***************/
 #nav_admin{
+
     background-color: #E6DBD7;
 }
 
@@ -80,13 +81,16 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
 
 .page-item.disable .page-link {
 
+
 }
 
 /* Media Tablette */
 @media (min-width: 768px) {
+
     h5 {
         font-size: 0.8rem;
     }
+
 
     /*Menu sidebar*/
     .menu_tuile {

@@ -22,6 +22,7 @@ Route::get('/admin',function (){
     return view('admin.home');
 });
 
+
 // USER MANGER
 Route::get('/admin/users',[UserController::class,'index']);
 Route::get('/admin/users/create',[UserController::class,'creat']);
@@ -30,3 +31,4 @@ Route::get('/admin/users/edit/{user_id}',[UserController::class,'edit']);
 Route::post('/admin/user/create',[UserController::class,'store']);
 Route::post('/admin/user/edit/{user_id}',[UserController::class,'update']);
 Route::post('/admin/users/delete/',[UserController::class,'remove']);
+

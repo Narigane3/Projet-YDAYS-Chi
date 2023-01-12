@@ -5,8 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {{-- Not index this page form Google --}}
+    <meta name="robot" content="noindex">
+
     <title>Chi - @yield('title')</title>
+    
     <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css">
+
     @vite('resources/js/app.js')
     @section('head')
     @show
@@ -16,6 +22,7 @@
 <div class="wrapper">
     @section('navbar')
         <nav id="nav_admin">
+
             <ul class="nav justify-content-start pt-1 pb-1 ps-2 ps-md-3">
                 <li class="nav-item">
                     <a type="button" data-bs-toggle="offcanvas" data-bs-target="#admin_menu"
