@@ -39,63 +39,47 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#home"></use>
-                        </svg>
-                        Home
+                    <a href="/admin/" class="nav-link link-dark" aria-current="page">
+                        <i class="bi bi-house-door-fill me-2"></i>
+                        Accueil
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#speedometer2"></use>
-                        </svg>
-                        Dashboard
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#table"></use>
-                        </svg>
-                        Orders
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#grid"></use>
-                        </svg>
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#people-circle"></use>
-                        </svg>
-                        Customers
-                    </a>
-                </li>
+
+                @auth()
+                    @if( auth()->user()['role_id'] == 3|| auth()->user()['role_id'] == 4)
+                        <li>
+                            <hr>
+                        </li>
+
+                        <li>
+                            <a href="/admin/users/" class="nav-link link-dark">
+                                <i class="bi bi-people-fill me-2"></i>
+                                Gestion des utilisateurs
+                            </a>
+                        </li>
+                    @endif
+                @endauth
             </ul>
             <hr>
+            @auth()
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Admin</strong>
+                    <i class="bi-person-circle rounded-circle me-2" style="font-size: 30px"></i>
+                    <strong>{{ auth()->user()['username'] }}</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+
                     <li>
-                        <hr class="dropdown-divider">
+                        <form @submit.prevent="logout" action="/logout" method="POST" ref="form" class="d-inline">
+                            @csrf
+                            <input type="hidden" value="{{ route('logout') }}">
+                            <input type="submit" class="dropdown-item" style="background: none" value="Se déconnecter">
+                        </form>
                     </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
                 </ul>
             </div>
+            @endauth
         </div>
     @show
     <!-- Page Content -->
