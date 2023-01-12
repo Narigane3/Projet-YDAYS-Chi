@@ -53,7 +53,7 @@ class UserController extends Controller
             'username' => 'required | unique:users|max:255 | string',
             'email' => 'required | unique:users| email | max:255',
             'password' => 'required|confirmed',
-            'phone' => 'max:12 | string',
+            'phone' => 'max:12',
             'role' => 'numeric'
         ]);
 
@@ -117,6 +117,19 @@ class UserController extends Controller
             'phone' => $request->input('phone') ?? "",
             'role_id' => $role
         ]);
+
+        return redirect('/admin/users');
+    }
+
+    public function remove(Request $request)
+    {
+
+        $request->validate([
+            'data_remove_id' => 'required|present'
+        ]);
+
+        User::find($request->input('data_remove_id'))->update(
+            ['status' => '2', 'email' => null, 'firstname' => 'deleted', 'lastname' => 'deleted', 'phone' => '*******', 'password' => '*****']);
 
         return redirect('/admin/users');
     }

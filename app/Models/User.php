@@ -36,7 +36,8 @@ class User extends Authenticate
         'email',
         'phone',
         'password',
-        'role_id'
+        'role_id',
+        'status'
     ];
 
     /**
@@ -75,7 +76,7 @@ class User extends Authenticate
         return DB::table($this->table, 'u')
             ->select(['u.id', 'u.firstname', 'u.lastname', 'u.username', 'u.email', 'roles.libelle'])
             ->join('roles', 'role_id', '=', 'roles.id')
-            ->where('u.status', "=", '1')
+            ->where('u.status', "=", '1')->where('u.role_id','!=','4')
             ->paginate(5);
     }
 
