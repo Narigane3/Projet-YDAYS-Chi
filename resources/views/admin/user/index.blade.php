@@ -10,7 +10,7 @@
     <div id="remover">
         <div class="modal fade" id="modale_supp" tabindex="-1" aria-labelledby="modale_supp" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <form action="admin/users/delete" method="post">
+                <form action="/admin/users/delete" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modal_supp">Suppression de l'utilisateur</h5>
@@ -18,7 +18,8 @@
                         </div>
                         <div class="modal-body">
                             <p>La suppression est definitive mercie de bien vouloir confirmé.</p>
-                            <input v-bind:value="remove_id" type="hidden" id="supp_item" name="data_remove" value="">
+                            @csrf
+                            <input v-bind:value="remove_id" type="hidden" id="supp_item" name="data_remove_id" value="">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
@@ -56,6 +57,16 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @if(count($users)<1)
+                        <td></td>
+                        <td></td>
+                        <td class=" col text-center">
+                                <p class="fw-bold">Aucun utilisateur</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    @endif
                     @foreach($users as $user)
                         <tr>
                             <td>{{$user->firstname}}</td>
