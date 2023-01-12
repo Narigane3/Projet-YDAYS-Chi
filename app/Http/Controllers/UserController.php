@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 
@@ -45,8 +47,6 @@ class UserController extends Controller
      */
     public function store(Request $request): string
     {
-        $userModel = new User();
-
         $request->validate([
             'firstname' => 'required | max:150 | string',
             'lastname' => 'required | max:150 | string',
@@ -87,9 +87,8 @@ class UserController extends Controller
         return redirect('/admin/users');
     }
 
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $user_id): Redirector|Application|RedirectResponse
     {
-        $model = new User();
 
         $request->validate([
             'firstname' => 'required | max:150 | string',
@@ -121,7 +120,7 @@ class UserController extends Controller
         return redirect('/admin/users');
     }
 
-    public function remove(Request $request)
+    public function remove(Request $request): Redirector|Application|RedirectResponse
     {
 
         $request->validate([
