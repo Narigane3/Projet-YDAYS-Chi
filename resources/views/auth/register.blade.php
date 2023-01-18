@@ -62,10 +62,13 @@
                                    id="register-email" value="{{old('email')}}">
                         </div>
                     </div>
+
                     <div class="m-3 p-3">
                        <span class="fw-light fst-italic">L'ensembles des information si dessus ne seront pas rendu public ci-dessus</span>
                     </div>
+                    
                     <hr>
+                    
                     <div class="row mb-3">
                         <div class="col-6">
                             <label for="username">Pseudonym :</label>

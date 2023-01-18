@@ -1,0 +1,32 @@
+a img {
+    margin: 32px;
+}
+
+@media screen and (max-width: 480px) {
+    a img {
+        max-height: 120px;
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    a img {
+        max-height: 180px;
+        max-width: 270px;
+    }
+}
+
+@media screen and (min-width: 721px) {
+    a img {
+        max-height: 270px;
+        max-width: 405px;
+    }
+}
+
+h6 {
+    margin-top: 10%;
+}
+
+.btn-success {
+    margin-top: 10%;
+}

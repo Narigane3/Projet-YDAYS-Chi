@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\MediaController;
 
 
 /*
@@ -31,8 +32,13 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::get('/admin', function () {
         return view('admin.home');
     });
-
-
+    
+    // MEDIA MANAGER
+    Route::get("/galery", [MediaController::class, "galery"]);
+    Route::get("/galery/{mediaId}", [MediaController::class, "findOneMedia"]);
+    Route::post("/modifyMedia", [MediaController::class, "modifyOneMedia"]);
+    Route::post("/createMedia", [MediaController::class, "createMedia"]);
+    Route::get("/deleteMedia/{mediaId}", [MediaController::class, "deleteMedia"]);
 
 });
 
