@@ -77,6 +77,7 @@ class User extends Authenticate
             ->select(['u.id', 'u.firstname', 'u.lastname', 'u.username', 'u.email', 'roles.libelle'])
             ->join('roles', 'role_id', '=', 'roles.id')
             ->where('u.status', "=", '1')->where('u.role_id','!=','4')
+            ->where('u.id','!=',auth()->user()['id'])
             ->paginate(5);
     }
 
