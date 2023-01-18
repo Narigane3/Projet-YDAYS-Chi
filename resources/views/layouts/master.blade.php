@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Chi - @yield('title')</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css%22%3E">
     @vite('resources/js/app.js')
     @section('head')
     @show

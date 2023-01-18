@@ -1,0 +1,37 @@
+#user_table{
+    background-color: #D7534B;
+    color: white;
+}
+
+.edite_user{
+    color: #5D858A;
+}
+.remove_user{
+    color: #D7534B;
+}
+
+#add_user{
+    border-color: #5D858A;
+    color: #5D858A;
+}
+#add_user:hover{
+    background-color: #5D858A;
+    color: white;
+}
+
+.btn_custom{
+    background-color: #5D858A;
+    border-color: #5D858A;
+}
+
+/* Custom Button */
+.btn.btn-primary.back_btn {
+    background-color: #5D858A;
+    border-color: #5D858A;
+}
+
+.btn.btn-primary.back_btn:hover {
+    color: #5D858A;
+    background-color: white;
+    border-color: #5D858A;
+}
