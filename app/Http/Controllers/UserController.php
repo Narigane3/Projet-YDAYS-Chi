@@ -57,21 +57,27 @@ class UserController extends Controller
             'role' => 'numeric'
         ]);
 
-        // make hash of password
-        $password = $request->input('firstname');
-        $hashedPassword = Hash::make($password, ['rounds' => 12]);
+        // Get password
+        $password = $request->input('password');
 
+        // make hash of password
+        $hashedPassword = Hash::make($password);
+        // Default is User
         $role = 1;
 
         switch ($request->input('role')) {
-            case '2':
+            case '2': // editor
                 $role = 2;
                 break;
-            case'3':
+            case'3': // Admin
                 $role = 3;
                 break;
             default:
                 break;
+        }
+
+        if ($role === 3 && auth()->user()['role_id'] != 4) {
+           return redirect('/admin/users');
         }
 
         User::create([
@@ -108,6 +114,10 @@ class UserController extends Controller
                 break;
             default:
                 break;
+        }
+        // Block l'attribution du role admin si l'user n'est pas un super admin
+        if ($role === 3 && auth()->user()['role_id'] != 4) {
+            return redirect('/admin/users');
         }
 
         User::where('id', '=', $user_id)->update([
