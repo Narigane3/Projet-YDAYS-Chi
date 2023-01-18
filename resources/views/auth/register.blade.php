@@ -25,6 +25,19 @@
             </div>
             <div class="d-flex justify-content-center">
                 <form method="POST" action="/register">
+                    {{-- Error handling --}}
+                    @if(!$errors->isEmpty())
+                        <div class="m-3 d-flex justify-content-center">
+                            <div class="alert alert-danger col-12">
+                                <h3>Oups..</h3>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li class="">{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    @endif
                     <div class="row mb-3">
                         <div class="col-6">
                             <label for="register-last-name">Prénom :</label>
@@ -50,7 +63,7 @@
                         </div>
                     </div>
                     <div class="m-3 p-3">
-                       <span class="fw-bolder">L'ensembles des information si dessus ne seront pas rendu public ci-dessus</span>
+                       <span class="fw-light fst-italic">L'ensembles des information si dessus ne seront pas rendu public ci-dessus</span>
                     </div>
                     <hr>
                     <div class="row mb-3">
@@ -60,7 +73,7 @@
                                    id="username" value="{{old('username')}}">
                         </div>
                         <div class="col-12 mt-3">
-                            <p>Le pseudonym sera visible par l'ensemble des utilisateur</p>
+                           <span class="fw-light"> Le pseudonym sera visible par l'ensemble des utilisateur</span>
                         </div>
                     </div>
 
@@ -81,8 +94,9 @@
                         <label for="data_check_auth" class="form-check-label">consentez vous a nous laisser exploiter
                             ces données conformément à notre <a href="#">politique de confidentialité</a></label>
 
-                        <div v-if="approved === false" class="alert-danger m-3 p-3"> Mercie de bien vouloir consentir a
-                            notre politique de confidentialité pour continuer
+                        <div v-if="approved === false" class="m-3 p-3">
+                            <span class="fw-bolder">Mercie de bien vouloir consentir a
+                            notre politique de confidentialité pour continuer</span>
                         </div>
                     </div>
                     @csrf
@@ -91,19 +105,6 @@
                     </div>
                 </form>
             </div>
-            {{-- Error handling --}}
-            @if(!$errors->isEmpty())
-                <div class="m-3 d-flex justify-content-center">
-                    <div class="alert alert-danger col-6">
-                        <h3>Oups..</h3>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li class="">{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            @endif
         </div>
     </div>
 
