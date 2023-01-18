@@ -18,8 +18,7 @@ class Media extends Model
         "path" => "",
         "title" => "",
         "alt"=> "",
-        "wheight" => 0,
-        "height" => 0,
+        "size" => 0,
         "mime_type" => "",
         "status" => true
     ];
@@ -28,8 +27,7 @@ class Media extends Model
         "path",
         "title",
         "alt",
-        "wheight",
-        "height",
+        "size",
         "mime_type",
         "status"
     ];

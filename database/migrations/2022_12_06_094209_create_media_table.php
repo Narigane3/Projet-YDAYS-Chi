@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string("path", 255);
             $table->string("title", 150);
             $table->string("alt", 255);
-            $table->integer("wheight");
-            $table->integer("height");
-            $table->string("mime_type", 5);
+            $table->integer("size");
+            $table->string("mime_type", 15);
             $table->boolean("status");
             $table->timestamps();
         });

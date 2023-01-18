@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Media;
-use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use \Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\File;
 
 class MediaController extends Controller
 {
@@ -18,7 +16,7 @@ class MediaController extends Controller
      */
     public function galery(): Application|Factory|View
     {
-        $medias = Media::all()->toArray();
+        $medias = Media::where("status", "=", 1)->get()->toArray();
         return view("medias.galery", ["medias" => $medias]);
     }
 
@@ -26,9 +24,61 @@ class MediaController extends Controller
      * @param int $mediaId
      * @return Application|Factory|View
      */
-    public function modifyOneMedia(int $mediaId): Application|Factory|View
+    public function findOneMedia(int $mediaId): Application|Factory|View
     {
         $media = Media::find($mediaId);
         return view("medias.modifyOneMedia", ["media" => $media]);
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function modifyOneMedia(Request $request)
+    {
+        $request->validate([
+            "modifyMediaTitle" => "required|max:140",
+            "modifyMediaAlt" => "required|max:255"
+        ]);
+
+        $media = Media::find($request->input("mediaId"));
+        $media->update([
+            "title" => $request->input("modifyMediaTitle"),
+            "alt" => $request->input("modifyMediaAlt")
+        ]);
+
+        return redirect("/galery");
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function createMedia(Request $request)
+    {
+        $files = $_FILES["medias"];
+        $newPath = "/medias/" . $files["name"];
+        File::move($files["tmp_name"], public_path() . $newPath);
+
+        Media::create([
+            "path" => $newPath,
+            "title" => $files["name"],
+            "alt" => $request->input("createAlt"),
+            "size" => $files["size"],
+            "mime_type" => $files["type"],
+            "status" => 1
+        ]);
+
+        return redirect("/galery");
+    }
+
+    public function deleteMedia(int $mediaId)
+    {
+        $media = Media::find($mediaId);
+        $media->update([
+            "status" => 0
+        ]);
+
+        return redirect("/galery");
     }
 }

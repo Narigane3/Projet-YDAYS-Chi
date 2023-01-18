@@ -19,4 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get("/galery", [MediaController::class, "galery"]);
-Route::get("/galery/{mediaId}", [MediaController::class, "modifyOneMedia"]);
+Route::get("/galery/{mediaId}", [MediaController::class, "findOneMedia"]);
+Route::post("/modifyMedia", [MediaController::class, "modifyOneMedia"]);
+Route::post("/createMedia", [MediaController::class, "createMedia"]);
+Route::get("/deleteMedia/{mediaId}", [MediaController::class, "deleteMedia"]);
