@@ -19,11 +19,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// REDIRECT USER AFTER THE LOG
+Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function (){
+    Route::get('/home', function () {
+        return view('welcome');
+    });
+});
+
 // REQUIRE ROLE : EDITOR || ADMIN || SUPERADMIN
 Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::get('/admin', function () {
         return view('admin.home');
     });
+
+
+
+});
+
+// REQUIRE ROLE : ADMIN || SUPERADMIN
+Route::middleware(\App\Http\Middleware\IsAdmin::class)->group(function () {
 
     // USER MANGER
     Route::get('/admin/users', [UserController::class, 'index']);
@@ -33,7 +47,4 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::post('/admin/user/create', [UserController::class, 'store']);
     Route::post('/admin/user/edit/{user_id}', [UserController::class, 'update']);
     Route::post('/admin/users/delete/', [UserController::class, 'remove']);
-
 });
-
-// REQUIRE ROLE : ADMIN || SUPERADMIN
