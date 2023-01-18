@@ -20,7 +20,7 @@
         <div class="m-3 d-flex flex-column bd-highlight justify-content-center">
             <div class="mb-3 d-flex justify-content-center">
                 <div>
-                    <h1>Bienvenu dans l'aventure Chi @{{last_name}}</h1>
+                    <h1>Bienvenu dans l'aventure Chi</h1>
                 </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -28,20 +28,18 @@
                     <div class="row mb-3">
                         <div class="col-6">
                             <label for="register-last-name">Prénom :</label>
-                            <input v-model="last_name" class="form-control" name="lastname" type="text" placeholder="Prénom"
-                                   id="register-last-name" value="{{old('lastname')}}">
+                            <input class="form-control" name="lastname" type="text" placeholder="Prénom" id="register-last-name" value="{{old('lastname')}}">
                         </div>
                         <div class="col-6">
                             <label for="register-first-name">Nom :</label>
-                            <input  class="form-control" name="firstname" type="text" placeholder="Nom"
-                                   id="register-first-name" value="{{old('firstname')}}">
+                            <input  class="form-control" name="firstname" type="text" placeholder="Nom" id="register-first-name" value="{{old('firstname')}}">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-6">
                             <label for="phone">Numéro de téléphone (Optionnel):</label>
                             <input class="form-control" name="phone" type="tel" placeholder="06 00 00 00 00" id="phone"
-                            value="{{old('tel')}}">
+                            value="{{old('phone')}}">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -51,8 +49,8 @@
                                    id="register-email" value="{{old('email')}}">
                         </div>
                     </div>
-                    <div class="alert-info m-3 p-3">
-                        L'ensembles des information si dessus ne seront pas rendu public
+                    <div class="m-3 p-3">
+                       <span class="fw-bolder">L'ensembles des information si dessus ne seront pas rendu public ci-dessus</span>
                     </div>
                     <hr>
                     <div class="row mb-3">
