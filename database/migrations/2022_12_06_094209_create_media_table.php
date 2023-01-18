@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -13,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('media', function (Blueprint $table) {
+        Schema::create('medias', function (Blueprint $table) {
             $table->id();
             $table->string("path", 255);
             $table->string("title", 150);
@@ -23,6 +24,17 @@ return new class extends Migration
             $table->boolean("status");
             $table->timestamps();
         });
+        // add value default
+        DB::table('medias')->insert([
+            'path' => "/medias/default.jpg",
+            'title' => "default.jpg",
+            'alt' => "Image par défaut quand aucune image est trouvée.",
+            'size' => 2420,
+            'mime_type' => "image/jpeg",
+            'status' => 0,
+            "created_at" => new DateTimeImmutable(),
+            "updated_at" => new DateTimeImmutable()
+        ]);
     }
 
     /**

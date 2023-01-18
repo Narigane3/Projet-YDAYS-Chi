@@ -12,7 +12,7 @@ class Media extends Model
 {
     use HasFactory;
 
-    protected $table = "media";
+    protected $table = "medias";
 
     protected $attributes = [
         "path" => "",

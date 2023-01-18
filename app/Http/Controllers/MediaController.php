@@ -38,13 +38,19 @@ class MediaController extends Controller
     {
         $request->validate([
             "modifyMediaTitle" => "required|max:140",
-            "modifyMediaAlt" => "required|max:255"
+            "modifyMediaAlt" => "max:255"
         ]);
+
+        if (is_null($request->input("modifyMediaAlt"))) {
+            $alt = $request->input("modifyMediaTitle");
+        } else {
+            $alt = $request->input("modifyMediaAlt");
+        }
 
         $media = Media::find($request->input("mediaId"));
         $media->update([
             "title" => $request->input("modifyMediaTitle"),
-            "alt" => $request->input("modifyMediaAlt")
+            "alt" => $alt
         ]);
 
         return redirect("/galery");
@@ -60,10 +66,16 @@ class MediaController extends Controller
         $newPath = "/medias/" . $files["name"];
         File::move($files["tmp_name"], public_path() . $newPath);
 
+        if (is_null($request->input("createAlt"))) {
+            $alt = $files["name"];
+        } else {
+            $alt = $request->input("createAlt");
+        }
+
         Media::create([
             "path" => $newPath,
             "title" => $files["name"],
-            "alt" => $request->input("createAlt"),
+            "alt" => $alt,
             "size" => $files["size"],
             "mime_type" => $files["type"],
             "status" => 1
@@ -72,6 +84,10 @@ class MediaController extends Controller
         return redirect("/galery");
     }
 
+    /**
+     * @param int $mediaId
+     * @return Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function deleteMedia(int $mediaId)
     {
         $media = Media::find($mediaId);
