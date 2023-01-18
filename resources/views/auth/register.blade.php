@@ -29,25 +29,26 @@
                         <div class="col-6">
                             <label for="register-last-name">Prénom :</label>
                             <input v-model="last_name" class="form-control" name="lastname" type="text" placeholder="Prénom"
-                                   id="register-last-name">
+                                   id="register-last-name" value="{{old('lastname')}}">
                         </div>
                         <div class="col-6">
                             <label for="register-first-name">Nom :</label>
                             <input  class="form-control" name="firstname" type="text" placeholder="Nom"
-                                   id="register-first-name">
+                                   id="register-first-name" value="{{old('firstname')}}">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-6">
                             <label for="phone">Numéro de téléphone (Optionnel):</label>
-                            <input class="form-control" name="phone" type="tel" placeholder="06 00 00 00 00" id="phone">
+                            <input class="form-control" name="phone" type="tel" placeholder="06 00 00 00 00" id="phone"
+                            value="{{old('tel')}}">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-12">
                             <label for="register-email">Adresse mail :</label>
                             <input class="form-control" name="email" type="email" placeholder="mon.mail@exemple.fr"
-                                   id="register-email">
+                                   id="register-email" value="{{old('email')}}">
                         </div>
                     </div>
                     <div class="alert-info m-3 p-3">
@@ -58,7 +59,7 @@
                         <div class="col-6">
                             <label for="username">Pseudonym :</label>
                             <input class="form-control" name="username" type="text" placeholder="xXPizzaMasterClassXx"
-                                   id="username">
+                                   id="username" value="{{old('username')}}">
                         </div>
                         <div class="col-12 mt-3">
                             <p>Le pseudonym sera visible par l'ensemble des utilisateur</p>
