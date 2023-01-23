@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/maquette/auth',function (){
+    return view('login_register');
+});
+
 // REDIRECT USER AFTER THE LOG
 Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function (){
     Route::get('/home', function () {
