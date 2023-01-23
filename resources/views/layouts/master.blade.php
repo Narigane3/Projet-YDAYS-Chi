@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Chi - @yield('title')</title>
-    <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css%22%3E">
+    <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css">
     @vite('resources/js/app.js')
     @section('head')
     @show
@@ -24,9 +24,9 @@
         </div>
     </nav>
 @show
-<div class="container">
+
     @yield('content')
-</div>
+
 </body>
 <footer>
     @section('footer')
