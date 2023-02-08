@@ -1,6 +1,8 @@
 html{
     color: #1D1D1B;
-    font-family: 'kapelka-new', serif;
+    font-family: kapelka-new, script, serif;
+    font-weight: 400;
+    font-style: normal;
 }
 /* Titre */
 h5{
@@ -102,10 +104,5 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-no
         height: 80px;
         width: 5vw;
     }
-
-}
-/* Media Desktop */
-@media (min-width: 900px) {
-    /*Menu sidebar*/
 
 }

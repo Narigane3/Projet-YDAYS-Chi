@@ -1,0 +1,88 @@
+/*squelette de la page*/
+.block{
+    height: 100vh
+}
+
+.block_auth{
+    background-color: #D7534B;
+}
+
+
+@media screen and(max-width: 750px) {
+    .block{
+        height: 50vh
+    }
+
+}
+@media screen and(min-width: 750px) {
+    #auth_logo{
+        position: absolute;
+    }
+
+    /*#block_auth{*/
+    /*    background-color: #D7534B;*/
+    /*    position: absolute;*/
+    /*    top: 50%;*/
+    /*    right: 50%;*/
+    /*    transform: translate(-50%, -50%);*/
+    /*    margin: auto;*/
+    /*}*/
+
+}
+
+button.w-100.btn.btn-lg.btn-primary.login {
+    background-color: #D7534B;
+    border-color: #D7534B;
+    border-radius: 1rem;
+}
+
+#login_email, #login_password {
+    background-color: rgba(93, 133, 138, 0.20);
+    border-radius: 1rem;
+    color: #4a5568;
+}
+
+#auth_logo {
+    border-radius: 1rem;
+    width: 80px;
+}
+
+.btn_menu {
+    background-color: #DC7528;
+    color: white;
+}
+
+#illustration_bottom {
+    width: 10rem;
+}
+
+#illustration_bottom_content {
+    background-image: url('../../public/images/illustration/illsutration_temps.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+button.btn.btn-outline-primary.btn_switch {
+    color: white !important;
+    border-color: white !important;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+button:hover.btn.btn-outline-primary:hover.btn_switch {
+    color: #DC7528 !important;
+    border-color: white !important;
+    background-color: white !important;
+}
+
+.mobile_switch_content {
+    padding: 3rem 0;
+    margin: 15rem 0;
+}
