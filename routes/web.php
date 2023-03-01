@@ -34,11 +34,13 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     });
 
     // PRODUCT MANAGE
-    Route::get("/admin/products", [ProductController::class, "products"]);
+    Route::get("/admin/products", [ProductController::class, "productsView"]);
     Route::get("/admin/products/edit/{productId}", [ProductController::class, "productModifyView"]);
-
     Route::get("/admin/product/delete/{productId}", [ProductController::class, "productDelete"]);
-    Route::post("/admin/product/edit/{productId}", [ProductController::class, "productModify"]);
+    Route::get("/admin/product/createView", [ProductController::class, "createProductView"]);
+
+    Route::post("/admin/product/edit/{productId}", [ProductController::class, "modifyProduct"]);
+    Route::post("/admin/product/edit", [ProductController::class, "createProduct"]);
 });
 
 // REQUIRE ROLE : ADMIN || SUPERADMIN

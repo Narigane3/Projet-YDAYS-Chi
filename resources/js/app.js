@@ -12,3 +12,4 @@ import './bootstrap/bootstrap.bundle';
 import './auth/register';
 import './admin/user/user_gestion'
 import './admin/remove';
+import './product/create'

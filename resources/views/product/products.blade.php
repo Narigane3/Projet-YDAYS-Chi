@@ -16,7 +16,7 @@
                 <a href="/admin" class="btn btn-primary back_btn">
                     Retour
                 </a>
-                <a class="btn btn-outline-secondary ms-md-3" href="">
+                <a class="btn btn-outline-secondary ms-md-3" href="/admin/product/createView">
                     Ajouter
                 </a>
             </div>

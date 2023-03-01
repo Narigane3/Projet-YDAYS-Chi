@@ -20,7 +20,7 @@ class ProductController extends Controller
         $this->modelTva = new Tva();
     }
 
-    public function products()
+    public function productsView()
     {
         $products = $this->modelProduct->getAllProducts();
 
@@ -36,12 +36,12 @@ class ProductController extends Controller
     public function productModifyView(int $productId)
     {
         $product = $this->modelProduct::find($productId);
-        $tvas = $this->modelTva->getAllTvaExpectCurrentId($productId);
-        $categories = $this->modelCategory->getAllCategoryExpectCurrentId($productId);
-        return view("product.productsModify", ["product" => $product, "tvas" => $tvas, "categories" => $categories]);
+        $tvas = $this->modelTva->getAllTvaExpectCurrentId($product->tva->id);
+        $categories = $this->modelCategory->getAllCategoryExpectCurrentId($product->category->id);
+        return view("product.productModify", ["product" => $product, "tvas" => $tvas, "categories" => $categories]);
     }
 
-    public function productModify(Request $request, int $productId)
+    public function modifyProduct(Request $request, int $productId)
     {
         $request->validate([
             "productModifyName" => "required|max:255",
@@ -69,83 +69,38 @@ class ProductController extends Controller
         return redirect("/admin/products");
     }
 
-
-
-
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function createProductView()
     {
-        //
+        $tvas = $this->modelTva->getAllTvaExpectCurrentId(-1);
+        $categories = $this->modelCategory->getAllCategoryExpectCurrentId(-1);
+
+        return view("product.productCreate", ["tvas" => $tvas, "categories" => $categories]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function createProduct(Request $request)
     {
-        //
-    }
+        $request->validate([
+            "productCreateName" => "required|max:255",
+            "productCreateReference" => "required|max:10",
+            "productCreateQuantity" => "required",
+            "productCreatePriceHT" => "required",
+            "productCreateDescription" => "required",
+            "productCreateCategory" => "required",
+            "productCreateTva" => "required"
+        ]);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        Product::create(
+            [
+                "name" => $request->input("productCreateName"),
+                "reference" => $request->input("productCreateReference"),
+                "description" => $request->input("productCreateDescription"),
+                "quantity" => $request->input("productCreateQuantity"),
+                "priceHT" => $request->input("productCreatePriceHT"),
+                "tva_id" => $request->input("productCreateTva"),
+                "category_id" => $request->input("productCreateCategory")
+            ]
+        );
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return redirect("/admin/products");
     }
 }
