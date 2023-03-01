@@ -27,4 +27,16 @@ class Category extends Model
         "reference",
         "status"
     ];
+
+    public function product()
+    {
+        return $this->hasMany("App\Models\Product", 'category_id', 'id');
+    }
+
+    public function getAllCategoryExpectCurrentId(int $id)
+    {
+        return Category::all()
+            ->where("status", "=", 1)
+            ->where("id", "!=", $id);
+    }
 }

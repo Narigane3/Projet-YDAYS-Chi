@@ -12,7 +12,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $table = "category";
+    protected $table = "product";
 
     protected $attributes = [
         "name" => "",
@@ -35,4 +35,38 @@ class Product extends Model
         "tva_id",
         "category_id"
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function tva()
+    {
+        return $this->belongsTo(Tva::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function getAllProducts()
+    {
+        return Product::with("tva", "category")
+            ->where("status", "=", 1)
+            ->get();
+    }
+
+    public function removeProduct(int $productId)
+    {
+        $product = Product::find($productId);
+        $product->update(
+            ["status" => 0]
+        );
+    }
 }

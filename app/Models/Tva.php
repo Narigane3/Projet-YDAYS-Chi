@@ -23,4 +23,16 @@ class Tva extends Model
         "tva",
         "status"
     ];
+
+    public function product()
+    {
+        return $this->hasMany("App\Models\Product", 'tva_id', 'id');
+    }
+
+    public function getAllTvaExpectCurrentId(int $id)
+    {
+        return Tva::all()
+            ->where("status", "=", 1)
+            ->where("id", "!=", $id);
+    }
 }

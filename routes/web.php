@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ Route::get('/', function () {
 });
 
 // REDIRECT USER AFTER THE LOG
-Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function (){
+Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {
     Route::get('/home', function () {
         return view('welcome');
     });
@@ -32,8 +33,12 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
         return view('admin.home');
     });
 
+    // PRODUCT MANAGE
+    Route::get("/admin/products", [ProductController::class, "products"]);
+    Route::get("/admin/products/edit/{productId}", [ProductController::class, "productModifyView"]);
 
-
+    Route::get("/admin/product/delete/{productId}", [ProductController::class, "productDelete"]);
+    Route::post("/admin/product/edit/{productId}", [ProductController::class, "productModify"]);
 });
 
 // REQUIRE ROLE : ADMIN || SUPERADMIN
