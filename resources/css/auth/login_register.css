@@ -1,35 +1,18 @@
-/*squelette de la page*/
-.block{
+/* POSITION DES BLOCKS */
+.block {
     height: 100vh
 }
 
-.block_auth{
+.block_auth {
     background-color: #D7534B;
 }
 
-
-@media screen and(max-width: 750px) {
-    .block{
-        height: 50vh
-    }
-
-}
-@media screen and(min-width: 750px) {
-    #auth_logo{
-        position: absolute;
-    }
-
-    /*#block_auth{*/
-    /*    background-color: #D7534B;*/
-    /*    position: absolute;*/
-    /*    top: 50%;*/
-    /*    right: 50%;*/
-    /*    transform: translate(-50%, -50%);*/
-    /*    margin: auto;*/
-    /*}*/
-
+#block_auth_logo {
+    position: initial !important;
+    width: 2fr !important;
 }
 
+/*CUSTOM FORME*/
 button.w-100.btn.btn-lg.btn-primary.login {
     background-color: #D7534B;
     border-color: #D7534B;
@@ -45,6 +28,7 @@ button.w-100.btn.btn-lg.btn-primary.login {
 #auth_logo {
     border-radius: 1rem;
     width: 80px;
+    margin-top: 3rem;
 }
 
 .btn_menu {
@@ -57,7 +41,7 @@ button.w-100.btn.btn-lg.btn-primary.login {
 }
 
 #illustration_bottom_content {
-    background-image: url('../../public/images/illustration/illsutration_temps.png');
+    background-image: url('../../../public/images/illustration/illsutration_temps.png');
     background-repeat: no-repeat;
     background-size: 90%;
     height: 160px;
@@ -85,4 +69,51 @@ button:hover.btn.btn-outline-primary:hover.btn_switch {
 .mobile_switch_content {
     padding: 3rem 0;
     margin: 15rem 0;
+}
+
+/*********************************/
+/******** MEDIA QUERY ***********/
+/*******************************/
+
+
+/** Screen < 992px
+*/
+@media (max-width: 992px) {
+
+    .block {
+        height: auto;
+        transform: none !important;
+    }
+
+    .block .translate-middle {
+        transform: none;
+        margin-top: 10rem;
+    }
+
+    #block_form_auth {
+        position: static !important;
+        margin: auto !important;
+        transform: initial !important;
+        padding-top: 3rem;
+    }
+
+    #block_auth_register {
+        position: static !important;
+        margin-inline: auto;
+        padding-top: 3rem;
+    }
+
+}
+
+/** Screen > 992px
+*/
+@media (min-width: 992px) {
+
+    #block_auth_logo {
+        position: absolute !important;
+        top: 0;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }

@@ -18,14 +18,16 @@
 @section('content')
     <div class="overflow-hidden">
         <!-- Logo -->
-        <div class="position-absolute top-0 start-0 col-3 m-5">
+        <div class="top-0 start-0 col-3 mx-auto mt-lg-5 ms-lg-5
+         text-center" id="block_auth_logo">
             <img src="{{url('images/logo/logo_chi_fond.jpg')}}" alt="logo chi" id="auth_logo">
         </div>
-        <section class="d-flex flex-column flex-md-row">
+        <section class="d-flex flex-column flex-lg-row">
             {{-- Section Login--}}
-            <div class="col col-md-7 d-flex d-md-block flex-column block">
+            <div class="col col-lg-7 d-flex d-lg-block flex-column block">
 
-                <div class="position-relative top-50 start-50 translate-middle col-6 text-center">
+                <div class="position-relative top-50 start-50 translate-middle col-6 text-center"
+                     id="block_form_auth">
                     <form>
                         <h1 class="fw-bolder mb-5 fw-normal">Connexion</h1>
 
@@ -73,8 +75,9 @@
                 </div>
             </div>
             {{-- Section Register--}}
-            <div class="col d-none d-md-block col-md-5 btn_menu block">
-                <div class="position-relative top-50 start-50 translate-middle col-6 text-center">
+            <div class="col d-none d-md-block col-lg-5 btn_menu block">
+                <div class="position-relative top-50 start-50 translate-middle col-6 text-center"
+                     id="block_auth_register">
                     <h2 class="fw-bolder mb-3 fw-normal mb-5">Rejoins nous !</h2>
                     <div class="fw-light my-5">
                         <p>Entre tes données</p>
@@ -85,7 +88,7 @@
                     </div>
 
                 </div>
-                <div id="illustration_bottom_content" class="overflow-none d-md-block d-none">
+                <div id="illustration_bottom_content" class="overflow-none d-lg-block d-none">
                 </div>
             </div>
         </section>
