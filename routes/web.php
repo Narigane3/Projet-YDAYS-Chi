@@ -23,8 +23,8 @@ Route::get('/maquette/auth',function (){
     return view('login_register');
 });
 
-Route::get('/maquette/auth',function (){
-    return view('login_register');
+Route::get('/maquette/home',function (){
+    return view('home');
 });
 
 // REDIRECT USER AFTER THE LOG
