@@ -33,6 +33,21 @@
 </body>
 <footer>
     @section('footer')
+        {{-- REINSURANCE FOOTER --}}
+        <div class="reinsurance">
+            <div class="reinsurance-item">
+                <h4>Service client <i class="bi bi-telephone-fill"></i></h4>
+            </div>
+            <div class="reinsurance-item">
+                <h4>Expedition 48h <i class="bi bi-send-fill"></i></h4>
+            </div>
+            <div class="reinsurance-item">
+                <h4>Charte qualité <i class="bi bi-hand-thumbs-up-fill"></i></h4>
+            </div>
+            <div class="reinsurance-item">
+                <h4> Paiement sécuriser <i class="bi bi-lock-fill"></i></h4>
+            </div>
+        </div>
         {{-- NETWORK MENU FOOTER --}}
         <div class="network_footer">
             <h4>Rester en contact !</h4>
@@ -114,6 +129,88 @@
                 </div>
             </div>
         </div>
+
+        {{--CONTENT DESKTOP--}}
+        <div class="desktop_footer d-lg-flex flex-row">
+
+            {{--DIV LOGO--}}
+            <div class="logo_footer col-3">
+                <a href="/">
+                    <img src="{{url('/images/logo/logo-chi.svg')}}" alt="logo Chi">
+                </a>
+            </div>
+
+            {{-- DIV CONTENT --}}
+            <div class="content_desktop_footer d-flex justify-content-between col-9">
+                {{-- COLUMUN 1--}}
+                <div class="col sub_content">
+                    <h4>Qui est chi ?</h4>
+                    <p> Lorem ipsum dolor sit
+                        amet, consectetur
+                        adipiscing elit, sed do
+                        eiusmod tempor
+                        incididunt ut labore et
+                        dolore magna aliqua. Ut
+                        enim ad minim veniam,
+                        quis nostrud exercitation</p>
+                </div>
+
+                {{--COLUMUN 2--}}
+                <div class="col">
+                    <div class="content_col">
+                        <div class="col sub_content">
+                            <h4>Calendrier</h4>
+                            <p>Voir +</p>
+                        </div>
+                    </div>
+                    <div class="network_desktop_footer sub_content">
+                        <h4>Rester en contact !</h4>
+                        <div class="link_network">
+                            <div>
+                                <a href="https://www.instagram.com/chi.lecalendriermenstruel/" target="_blank">
+                                    <img src="{{url('images/illustration/layout/footer/logo-network/instagram.svg')}}"
+                                         alt="logo-Instagram-chi">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://www.facebook.com/chilecalendriermenstruel/" target="_blank">
+                                    <img src="{{url('/images/illustration/layout/footer/logo-network/facebook.svg')}}"
+                                         alt="logo-facebook-chi">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" target="_blank">
+                                    <img src="{{url('/images/illustration/layout/footer/logo-network/tiktok.svg')}}"
+                                         alt="logo-tiktok-chi">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                {{--COLUMUN 3--}}
+                <div class="col">
+                    <div class="content_col">
+                        <div class="col sub_content">
+                            <h4>Article</h4>
+                            <ul class="list-unstyled">
+                                <li><p>catégorie 1</p></li>
+                                <li><p>catégorie 2</p></li>
+                                <li><p>catégorie 3</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_bottom sub_content">
+                        <h4>Faq</h4>
+                        <p>Voir +</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         {{-- SUB MENU FOOTER --}}
         <div class="menu_footer_3">
             <div class="text-center"><a href="#" class="link_menu_footer">Mention légales</a></div>
