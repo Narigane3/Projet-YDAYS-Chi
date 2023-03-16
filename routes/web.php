@@ -19,8 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/blog', function () {
+    $articles = [
+        ["title" => "Symptômes menstruels", "description" => "revverre", "date" => date("Y-m-d")],
+        ["title" => "Les protections", "description" => "verreverb", "date" => date("Y-m-d")],
+        ["title" => "Vivre avec ces règles", "description" => "bvzihqrivuz", "date" => date("Y-m-d")]
+    ];
+    return view('user.blog.home', ["articles" => $articles]);
+});
+
 // REDIRECT USER AFTER THE LOG
-Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function (){
+Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {
     Route::get('/home', function () {
         return view('welcome');
     });
@@ -31,7 +40,6 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::get('/admin', function () {
         return view('admin.home');
     });
-
 
 
 });
