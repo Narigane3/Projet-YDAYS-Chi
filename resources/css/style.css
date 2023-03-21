@@ -1,20 +1,29 @@
 
-html{
+html {
     color: #1D1D1B;
     font-family: kapelka-new, script, serif;
     font-weight: 400;
     font-style: normal;
 }
+
 /* Titre */
-h5{
+h5 {
     font-size: 1rem;
+}
+
+/************************
+    Navbar
+ */
+#master_nav {
+    background: none;
+    width: 100%;
+    z-index: 100;
 }
 
 /***************
  Menu panel admin
  ***************/
 #nav_admin {
-
     background-color: #E6DBD7;
 }
 
@@ -23,10 +32,14 @@ h5{
     background-color: #E6DBD7;
 }
 
+#logo_master_nav_content {
+    margin: auto;
+    padding-left: 2rem ;
+}
+
 img#menu_logo {
     height: auto;
     width: 85px;
-    margin: auto;
 }
 
 

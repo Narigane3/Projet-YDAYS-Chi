@@ -12,9 +12,11 @@
 <body>
 
 @section('navbar')
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo">
+    <nav class="navbar navbar-expand-lg navbar-light position-absolute top-0 start-0" id="master_nav">
+        <div class="container-fluid flex-nowrap">
+            <div id="logo_master_nav_content">
+                <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo">
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
