@@ -20,12 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', function () {
-    $articles = [
-        ["title" => "Symptômes menstruels", "description" => "revverre", "date" => date("Y-m-d")],
-        ["title" => "Les protections", "description" => "verreverb", "date" => date("Y-m-d")],
-        ["title" => "Vivre avec ces règles", "description" => "bvzihqrivuz", "date" => date("Y-m-d")]
-    ];
-    return view('user.blog.home', ["articles" => $articles]);
+    return view('user.blog.home');
 });
 
 // REDIRECT USER AFTER THE LOG

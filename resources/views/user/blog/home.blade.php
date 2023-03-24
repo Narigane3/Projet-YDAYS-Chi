@@ -7,23 +7,39 @@
 @stop
 
 @section('content')
-    <div class="container">
+    <div class="home-desktop">
+        <h1 class="page-title-desktop"><strong>BLOG</strong></h1>
+{{--        <img src="{{ url("/images/blog/home.jpg") }}" alt="Photo de la home page" style="max-width: 100%">--}}
+    </div>
+    <div class="home-mobile">
+        <h1 class="page-title-mobile"><strong>BLOG</strong></h1>
+        <img src="{{ url("/images/blog/home.jpg") }}" alt="Photo de la home page" style="max-width: 100%">
+    </div>
 
-        <div class="home">
-            <h1>BLOG</h1>
-            <img src="{{ url("/images/blog/home.jpg") }}" alt="Photo de la home page" style="max-width: 864px">
-        </div>
+
+    <div class="categories-content">
+        <h2 class="categories-title"><strong>Catégories</strong></h2>
 
         <div class="categories">
-            <h1>Catégories</h1>
+            <div class="card-full-img">
+                <img src="{{ url("/images/blog/symptomes_menstruels.jpg") }}" class="card-img" alt="Image carte symptômes menstruels">
+                <h3 class="title-card-full-img">Symptômes menstruels</h3>
+                <span class="badge rounded-pill text-bg-primary">Voir</span>
+            </div>
+
+            <div class="card-full-img">
+                <img src="{{ url("/images/blog/protections.jpg") }}" class="card-img" alt="Image carte symptômes menstruels">
+                <h3 class="title-card-full-img">Les protections</h3>
+                <span class="badge rounded-pill text-bg-primary">Voir</span>
+            </div>
+
+            <div class="card-full-img">
+                <img src="{{ url("/images/blog/vivre_avec_ces_regles.jpg") }}" class="card-img" alt="Image carte symptômes menstruels">
+                <h3 class="title-card-full-img">Vivre avec ces règles</h3>
+                <span class="badge rounded-pill text-bg-primary">Voir</span>
+            </div>
         </div>
 
-        <div class="articles">
-            <h1>Nos derniers articles</h1>
-            @foreach($articles as $article)
-                @include("_part.card", $article)
-            @endforeach
-        </div>
     </div>
 @stop
 

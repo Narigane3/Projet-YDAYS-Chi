@@ -1,3 +1,118 @@
-.categories {
+/* Desktop to Mobile */
+@media (max-width: 900px) {
+    .home-desktop { display: none }
+    .page-title-desktop { display: none }
+    .home-mobile { display: block }
+    .page-title-mobile { display: block }
+    .categories { flex-direction: column }
+}
+
+/* Mobile to Desktop */
+@media (min-width: 901px) {
+    .home-desktop { display: flex }
+    .page-title-desktop { display: flex }
+    .home-mobile { display: none }
+    .page-title-mobile { display: none }
+    .page-title-desktop { font-size: 60px; }
+    .categories { flex-direction: row }
+}
+
+.home-desktop {
+    background-image: url("../images/blog/home.jpg");
+    padding: 4em 2em 0 2em;
+    margin-bottom: 60px;
+}
+
+.page-title-desktop {
+    position: absolute;
+    bottom: 10px;
+    left: 45px;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.home-mobile {
+    padding: 1em;
+    margin-bottom: 60px;
+}
+
+.page-title-mobile {
+    color: black;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .page-title-desktop { font-size: 100px; }
+}
+
+@media (min-width: 1400px) {
+    .page-title-desktop { font-size: 115px; }
+}
+
+.categories-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #9CB9BE;
+    padding-top: 25px;
+}
+
+.categories-title {
+    margin-bottom: 25px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (min-width: 401px) {
+    .card-img {
+        margin: 0 35px;
+        max-height: 550px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-img {
+        margin: 0 35px;
+        max-height: 550px;
+        max-width: 250px;
+    }
+}
+
+.card-full-img {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.card-full-img h3 {
+    position: absolute;
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    margin: 0 25px;
+}
+
+.title-card-full-img {
+    color: white;
+    text-transform: uppercase;
+}
+
+.card-full-img span {
+    position: absolute;
+    bottom: 45px;
+    background-color: #DE9E91;
+    padding: 0 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
 }
