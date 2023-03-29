@@ -36,7 +36,39 @@
                 <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
             </div>
         </div>
+    </div>
 
+    <div class="articles-content">
+        <h2 class="articles-title"><strong>Nos derniers articles</strong></h2>
+
+        <div class="articles">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ url("/images/blog/crampe_menstruelle.jpg") }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Symptômes menstruels</h5>
+                    <p class="card-text">Comment soulager les crampes menstruelles : astuces et remèdes naturels</p>
+                    <div class="card-date">Le 05 décembre 2022</div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ url("/images/blog/coupe_menstruelle.jpg") }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Les protections</h5>
+                    <p class="card-text">La coupe menstruelle : comment l'utiliser et en prendre soin ?</p>
+                    <div class="card-date">Le 05 décembre 2022</div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ url("/images/blog/sport.jpg") }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Vivre avec ces règles</h5>
+                    <p class="card-text">Le sport et les règles : comment bien s'entraîner pendant cette période ?</p>
+                    <div class="card-date">Le 05 décembre 2022</div>
+                </div>
+            </div>
+        </div>
     </div>
 @stop
 
