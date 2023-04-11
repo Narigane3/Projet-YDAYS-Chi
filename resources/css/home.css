@@ -402,13 +402,13 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
     #home_header {
         background-image: url('../images/home/page accueil_photocalendrier.svg');
         background-size: 100%;
-        margin-top: 100px;
+        margin-top: 95px;
         padding-bottom: calc(5rem + 5vw);
         overflow: hidden;
     }
 
     /**
-        Titre de la page
+    *   Titre de la page
     */
 
     .home_space {

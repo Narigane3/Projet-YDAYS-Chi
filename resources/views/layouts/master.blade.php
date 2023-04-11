@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon" id="toggle-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div class="navbar-nav text-end">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </div>
             </div>
@@ -212,8 +212,6 @@
                 </div>
             </div>
         </div>
-
-
 
         {{-- SUB MENU FOOTER --}}
         <div class="menu_footer_3">
