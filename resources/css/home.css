@@ -3,3 +3,472 @@
 * Feuil de style Home page
 * Auteur : Loic Papazian
 */
+
+/**********************
+    DOCUMENT POSITION
+    *******/
+.master_content {
+}
+
+/**********************
+    HEADER AREA
+    *******/
+#home_header {
+    background-color: white;
+    background-image: url('../images/home/tel_photo.svg');
+    background-repeat: no-repeat;
+    width: 100vw;
+    padding-bottom: 4rem;
+}
+
+.home_space {
+    height: 420px;
+    width: 100vw;
+}
+
+#home_header_title {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: #c37f74;
+}
+
+#home_header_title h1 {
+    font-family: Impact, serif;
+    font-weight: bolder;
+    font-size: calc(3rem + .8vw)
+}
+
+#home_header_title .second_part_title {
+    font-family: Impact, serif;
+    display: block;
+    color: white;
+    -webkit-text-stroke: 1px #c37f74;
+}
+
+.header_cta {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 2rem;
+}
+
+.header_cta a {
+    color: white;
+    background-color: #DE9E91;
+    border-radius: 40px;
+    padding: .8rem;
+    font-weight: bolder;
+    font-size: calc(1rem - .3vw);
+}
+
+.header_cta a:hover {
+    color: #DE9E91;
+    background-color: white;
+    border-color: #DE9E91;
+}
+
+/***************************
+    About
+ */
+#home_about {
+    scroll-padding-inline: 3rem;
+    background-color: #cedcde;
+}
+
+.about_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/********
+    Title  About
+ */
+.about_content .about_title {
+    font-family: kapelka-new, script, serif;
+    padding: 1.5rem 0;
+}
+
+.about_content .about_title h2 {
+    font-size: calc(1.9rem + 0.5vw)
+}
+
+/*******
+    Picture  About
+ */
+
+.about_content .about_picture {
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-inline: 2rem;
+}
+
+.about_content .about_picture img {
+    width: 90%;
+}
+
+/******
+    Text  About
+ */
+.about_content .about_text {
+    padding-inline: 2rem;
+}
+
+.about_content .about_text p {
+    text-align: center;
+}
+
+/******
+    Button  About
+ */
+.about_content .about_cta {
+    background-color: white;
+    border-radius: 40px;
+    border: white solid 1px;
+    padding: .2rem 20%;
+    margin: 3rem 0;
+}
+
+.about_content a:hover.about_cta {
+    background-color: #5D858A;
+    color: white;
+    border: white solid 1px;
+}
+
+/**********************
+    PARTENARIAT
+ */
+.partenariat {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/**********************
+   TITLE PARTENARIAT
+ */
+
+.partenariat .partenariat_title h2 {
+    font-weight: bolder;
+    margin: 2rem 0;
+}
+
+/**********************
+   LOGO PARTENARIAT
+ */
+.carousel-item img {
+    margin: 0 auto 3rem;
+}
+
+.carousel-next-icon {
+    color: #DC7528;
+    font-size: 2rem;
+}
+
+.carousel-prev-icon {
+    color: #DC7528;
+    font-size: 2rem;
+}
+
+.carousel-control-prev{
+    opacity: 0.6;
+}
+
+.carousel-control-next{
+    opacity: 0.6;
+}
+
+/**********************
+    Join now's
+ */
+.join_now {
+    background-color: #cbd7c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.join_now .join_now_title {
+    font-weight: bolder;
+    color: black;
+    margin: 2rem 0;
+}
+
+.join_now .join_now_picture {
+    padding: 2rem 0;
+    margin-inline: auto;
+    width: 60vw;
+}
+
+.join_now .join_now_picture img {
+    width: 100%;
+
+}
+
+.join_now form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.join_now form input.input_email, .join_now form input.input_prenom {
+    width: 70vw;
+    padding: .3rem;
+    border: 1px solid #edf2f7;
+    border-radius: 13px;
+}
+
+.join_now .join_now_rpg_content {
+    width: 70vw;
+}
+
+.join_now form input.rgpd_acceptation {
+    margin-bottom: 1rem;
+}
+
+.rgpd_acceptation.form-check-input:checked {
+    background-color: #DC7528;
+    border-color: #DC7528;
+}
+
+.rgpd_content:hover {
+    color: #DC7528;
+}
+
+.join_now form .btn_join_now {
+    width: 70vw;
+    background-color: #DC7528;
+    color: white;
+    border: none;
+    font-size: .9rem;
+    border-radius: 13px;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.join_now .join_now_rpg a {
+    color: #DC7528;
+}
+
+/***************
+    ACTUALITIES
+ */
+
+.actu_content.container{
+    padding-inline: 0;
+    margin: 0;
+    margin-inline: auto;
+}
+
+.card.actu-items {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.card.actu-items img {
+    border-radius: 0;
+}
+
+.card-body {
+    border: 1px solid #989898;
+}
+
+.card-body h5 {
+    font-family: kapelka-new, script, serif;
+    font-weight: bolder;
+    color: #d6534b;
+    font-size: calc(1.2rem + 0.5vw);
+}
+
+.card-body p {
+    font-size: calc(.8rem + 0.5vw);
+    font-weight: bolder;
+}
+
+.card-body .card-date {
+    font-size: calc(.6rem + 0.5vw);
+    font-weight: normal;
+    color: #989898;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+a.btn.btn-custom.btn-actu {
+    background-color: white;
+    border-radius: 40px;
+    border: #989898 solid 1px;
+    color: black;
+    padding: 0.2rem 20%;
+    margin: 3rem auto 0;
+}
+
+a:hover.btn.btn-custom.btn-actu {
+    background-color: #DC7528;
+    border: #DC7528 1px solid;
+    color: white;
+}
+
+a.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
+    margin: 0 0 3rem 0;
+    background-color: #d58a7e;
+    border: #d58a7e 1px solid;
+    color: white;
+}
+
+a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
+    margin: 0 0 3rem 0;
+    background-color: white;
+    border: #d58a7e 1px solid;
+    color: #d58a7e;
+
+}
+
+@media (min-width: 380px) {
+    .home_space {
+        height: calc(500px + 15vw);
+    }
+}
+
+@media (min-width: 500px) {
+    #home_header {
+        background-image: url('../images/home/ipad_accueil.svg');
+        width: 100vw;
+        background-size: 100%;
+        margin-top: 100px;
+    }
+
+    .home_space {
+        height: calc(500px * .2vw);
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    /************************
+            Join now's
+         */
+    .join_now {
+        background-color: #cbd7c0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 0;
+        gap: 4rem;
+    }
+
+    .join_now .join_now_picture {
+        width: 45vw;
+        margin-inline: auto;
+        max-width: 400px;
+    }
+
+    .join_now .join_now_form {
+        margin: 0 2rem;
+        width: 30vw;
+    }
+
+    .join_now form {
+        width: 30vw;
+        margin: auto;
+    }
+
+    .join_now form input.input_email, .join_now form input.input_prenom {
+        width: 30vw;
+    }
+
+    .join_now form .btn_join_now {
+        width: 30vw;
+    }
+
+    .join_now .join_now_rpg_content {
+        width: 30vw;
+    }
+}
+
+@media (min-width: 992px) {
+    #home_header {
+        background-image: url('../images/home/page accueil_photocalendrier.svg');
+        background-size: 100%;
+        margin-top: 100px;
+        padding-bottom: calc(5rem + 5vw);
+        overflow: hidden;
+    }
+
+    /**
+        Titre de la page
+    */
+
+    .home_space {
+        height: 170px;
+        width: 100%;
+    }
+
+    #home_header_title{
+        display: block;
+        position: relative;
+        left: 15%;
+        top: 20%;
+        font-size: calc(1.5rem + 2vw);
+        width: 100%;
+    }
+
+    #home_header_title h1{
+        font-size: calc(1.5rem + 5vw);
+        width: 100%;
+    }
+
+    .header_cta{
+        display: block;
+        position: relative;
+        left: 15%;
+        top: 20%;
+        font-size: calc(1rem + 1vw);
+        width: 100%;
+    }
+    /**
+    * About us
+     */
+    .about_content .about_picture {
+        width: 50vw;
+    }
+    .about_content .about_text p {
+        text-align: start;
+    }
+
+    .about_content.about_cta{
+        justify-content: end;
+        align-items: end;
+    }
+    /**
+    * Partenaires
+     */
+    .carousel-control-prev{
+        opacity: 0.2;
+    }
+
+    .carousel-control-next{
+        opacity: 0.2;
+    }
+
+    .carousel-control-next:hover{
+        opacity: 1;
+    }
+
+    .carousel-control-prev:hover{
+        opacity: 1;
+    }
+
+}

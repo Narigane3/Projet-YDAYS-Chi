@@ -1,7 +1,9 @@
-
+@font-face{
+    font-family: Impact, serif;
+    src: url(../fonts/impact.ttf) format("truetype");
+}
 html {
     color: #1D1D1B;
-    font-family: kapelka-new, script, serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -15,9 +17,28 @@ h5 {
     Navbar
  */
 #master_nav {
-    background: none;
+    background-color: #af6356;
     width: 100%;
     z-index: 100;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active{
+    color: white;
+}
+/*
+    Nav icon menu
+*/
+.navbar-light .navbar-toggler-icon{
+    background-image: url("/public/images/illustration/layout/menu/list.svg");
+}
+.navbar-light .navbar-toggler-icon#toggle-icon .closed-icon{
+    background-image: url("/public/images/illustration/layout/menu/x-lg.svg");
+}
+
+/*
+    Btn toggle
+*/
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
 }
 
 /***************

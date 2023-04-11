@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi - @yield('title')</title>
     <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css">
+    <link rel="">
     @vite('resources/js/app.js')
     @section('head')
     @show
@@ -13,13 +14,14 @@
 
 @section('navbar')
     <nav class="navbar navbar-expand-lg navbar-light position-absolute top-0 start-0" id="master_nav">
-        <div class="container-fluid flex-nowrap">
+        <div class="container-fluid">
             <div id="logo_master_nav_content">
                 <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo">
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                    id="masterNavToggle">
+                <span class="navbar-toggler-icon" id="toggle-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -222,4 +224,19 @@
 
     @show
 </footer>
+
+<script defer>
+    const masterNavToggle = document.getElementById('masterNavToggle');
+    const toggleIcon = document.getElementById('toggle-icon')
+    const navbarNavAltMarkup = document.getElementById('navbarNavAltMarkup');
+
+    masterNavToggle.addEventListener('click', () => {
+    if (navbarNavAltMarkup.classList.contains('show')) {
+        toggleIcon.classList.add('closed-icon')
+    }else{
+        toggleIcon.classList.remove('closed-icon')
+    }
+
+    });
+</script>
 </html>
