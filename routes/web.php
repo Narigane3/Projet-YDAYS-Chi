@@ -19,8 +19,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// BLOG REDIRECT
 Route::get('/blog', function () {
     return view('user.blog.home');
+});
+Route::get("/blog/category/{category_id}", function ($category_id) {
+    switch ($category_id) {
+        case 1:
+            return view("user.blog.category_symptomes_menstruels");
+        case 2:
+            return view("user.blog.category_protections");
+        case 3:
+            return view("user.blog.category_live_with_periods");
+        default:
+            return view("user.blog.home");
+    }
 });
 
 // REDIRECT USER AFTER THE LOG

@@ -1,0 +1,88 @@
+.cat-img {
+    margin: 50px 10% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 550px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cat-texte {
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    bottom: 0;
+    left: 20px;
+}
+
+.cat-articles {
+    margin: 0 10%;
+}
+
+.cat-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+}
+
+.cat-col-2 {
+    flex-direction: column;
+    width: 30%;
+}
+
+.cat-col-8 {
+    flex-direction: column;
+    width: 70%;
+    margin-left: 100px;
+}
+
+.cat-article-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 450px;
+    height: 300px;
+}
+
+.cat-article-img-crampe-menstruelle {
+    background-image: url("/images/blog/crampe_menstruelle.jpg")
+}
+
+.cat-categorie-article-title {
+    font-size: 20px;
+    color: #D7534B;
+}
+
+.cat-article-title {
+    color: black;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.cat-article-description {
+    margin-top: 15px;
+    font-size: 15px;
+    color: black;
+}
+
+.cat-article-date {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #E6DBD7;
+}
+
+.cat-pagination {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.cat-pagination-btn {
+    background-color: #DE9E91;
+    padding: 10px 20px;
+    color: white;
+}

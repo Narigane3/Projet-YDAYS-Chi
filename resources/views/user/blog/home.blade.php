@@ -21,20 +21,26 @@
         <h2 class="categories-title"><strong>Catégories</strong></h2>
 
         <div class="categories">
-            <div class="card-full-img img-symptomes-menstruels img-size">
-                <h3 class="title-card-full-img">Symptômes menstruels</h3>
-                <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
-            </div>
+            <a href="/blog/category/1">
+                <div class="card-full-img img-symptomes-menstruels img-size">
+                    <h3 class="title-card-full-img">Symptômes menstruels</h3>
+                    <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
+                </div>
+            </a>
 
-            <div class="card-full-img img-protection img-size">
-                <h3 class="title-card-full-img">Les protections</h3>
-                <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
-            </div>
+            <a href="/blog/category/2">
+                <div class="card-full-img img-protection img-size">
+                    <h3 class="title-card-full-img">Les protections</h3>
+                    <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
+                </div>
+            </a>
 
-            <div class="card-full-img img-vivre-regles img-size">
-                <h3 class="title-card-full-img">Vivre avec ces règles</h3>
-                <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
-            </div>
+            <a href="/blog/category/3">
+                <div class="card-full-img img-vivre-regles img-size">
+                    <h3 class="title-card-full-img">Vivre avec ces règles</h3>
+                    <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
+                </div>
+            </a>
         </div>
     </div>
 
