@@ -81,9 +81,9 @@ a {
     height: 300px;
 }
 
-.cat-article-img-crampe-menstruelle {
-    background-image: url("/images/blog/crampe_menstruelle.jpg")
-}
+.cat-article-img-crampe-menstruelle { background-image: url("/images/blog/crampe_menstruelle.jpg") }
+.cat-article-img-saignement { background-image: url("/images/blog/saignement.jpg") }
+.cat-article-img-saut-humeur { background-image: url("/images/blog/saut_humeur.jpg") }
 
 .cat-article-img-coupe-menstruelle {
     background-image: url("/images/blog/coupe_menstruelle.jpg")

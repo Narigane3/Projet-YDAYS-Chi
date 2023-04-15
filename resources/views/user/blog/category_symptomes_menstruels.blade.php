@@ -18,7 +18,7 @@
     </div>
 
     <div class="cat-articles">
-        <a href="/blog/articles">
+        <a href="/blog/article/1">
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-crampe-menstruelle cat-article-img"></div>
                 <div class="cat-col-8">
@@ -54,7 +54,7 @@
 
         <a href="/blog/articles">
             <div class="cat-row">
-                <div class="cat-col-2 cat-article-img-crampe-menstruelle cat-article-img"></div>
+                <div class="cat-col-2 cat-article-img-saignement cat-article-img"></div>
                 <div class="cat-col-8">
                     <div class="cat-categorie-article-title">Symptômes menstruels</div>
                     <div class="cat-article-title">
@@ -72,7 +72,7 @@
             </div>
 
             <div class="card category-card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ url("/images/blog/crampe_menstruelle.jpg") }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ url("/images/blog/saignement.jpg") }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Symptômes menstruels</h5>
                     <h5 class="card-title-category">Les saignements abondants pendant les règles : que faire ?</h5>
@@ -89,7 +89,7 @@
 
         <a href="/blog/articles">
             <div class="cat-row">
-                <div class="cat-col-2 cat-article-img-crampe-menstruelle cat-article-img"></div>
+                <div class="cat-col-2 cat-article-img-saut-humeur cat-article-img"></div>
                 <div class="cat-col-8">
                     <div class="cat-categorie-article-title">Symptômes menstruels</div>
                     <div class="cat-article-title">
@@ -109,7 +109,7 @@
             </div>
 
             <div class="card category-card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ url("/images/blog/crampe_menstruelle.jpg") }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ url("/images/blog/saut_humeur.jpg") }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Symptômes menstruels</h5>
                     <h5 class="card-title-category">Comment prévenir et gérer les sauts d'humeur pendant les règles

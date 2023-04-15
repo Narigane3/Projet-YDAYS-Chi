@@ -1,0 +1,110 @@
+.art-category-title {
+    color: #D7534B;
+    margin: 15px 10% 0;
+    font-size: 25px;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.art-first-part {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.art-second-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.art-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    justify-content: center;
+}
+
+.art-user-picture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    background-image: url("/images/blog/persona.jpg");
+    border-radius: 50%;
+}
+
+.art-user-name {
+    font-size: 20px;
+    color: #D7534B;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.art-first-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.art-second-part-description {
+    width: calc(100% - 400px);
+    padding: 32px 32px 0 0;
+}
+
+.art-second-part-img {
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    background-image: url("/images/blog/contenu_articles.jpg");
+}
+
+.art-second-part-title {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.art-second-part-content {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .art-second-part { flex-direction: column-reverse }
+    .art-first-part { flex-direction: column }
+    .art-user { margin: 0 auto; }
+    .art-second-part-description { margin: 0 auto; width: 100%; padding: 32px 0 0 0}
+    .art-first-description { padding-left: 0 }
+}
+
+@media (max-width: 900px) {
+    .art-second-part-img { width: 200px; height: 200px; }
+}
+
+.art-comments {
+    padding: 20px 10%;
+    font-size: 30px;
+    background-color: #9CB9BE;
+    font-weight: bold;
+}
+
+.art-form {
+    margin: 20px 10% 0 10%;
+}
+
+.art-form-title {
+    font-size: 30px;
+    font-weight: bold;
+}

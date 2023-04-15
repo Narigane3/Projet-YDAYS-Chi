@@ -35,6 +35,14 @@ Route::get("/blog/category/{category_id}", function ($category_id) {
             return view("user.blog.home");
     }
 });
+Route::get("/blog/article/{article_id}", function ($article_id) {
+    switch ($article_id) {
+        case 1:
+            return view("user.blog.first_article");
+        default:
+            return view("user.blog.home");
+    }
+});
 
 // REDIRECT USER AFTER THE LOG
 Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {

@@ -48,14 +48,16 @@
         <h2 class="articles-title"><strong>Nos derniers articles</strong></h2>
 
         <div class="articles">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ url("/images/blog/crampe_menstruelle.jpg") }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Symptômes menstruels</h5>
-                    <p class="card-text">Comment soulager les crampes menstruelles : astuces et remèdes naturels</p>
-                    <div class="card-date">Le 05 décembre 2022</div>
+            <a href="/blog/article/1">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ url("/images/blog/crampe_menstruelle.jpg") }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Symptômes menstruels</h5>
+                        <p class="card-text" style="color: black">Comment soulager les crampes menstruelles : astuces et remèdes naturels</p>
+                        <div class="card-date">Le 05 décembre 2022</div>
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ url("/images/blog/coupe_menstruelle.jpg") }}" alt="Card image cap">
