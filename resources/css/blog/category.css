@@ -1,5 +1,5 @@
 .cat-img {
-    margin: 50px 10% 0;
+    margin: 0 10%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -10,6 +10,8 @@
 
 a {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .cat-texte {
@@ -18,6 +20,36 @@ a {
     font-size: 80px;
     bottom: 0;
     left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .cat-texte {
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        bottom: 0;
+        left: 20px;
+    }
+}
+
+.card-text-category {
+    color: black;
+}
+
+.cat-texte-mobile {
+    color: black;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .cat-texte-mobile {
+        color: black;
+        font-size: 25px;
+        margin-left: 10%;
+        margin-bottom: 15px;
+    }
 }
 
 .cat-articles {
@@ -53,6 +85,14 @@ a {
     background-image: url("/images/blog/crampe_menstruelle.jpg")
 }
 
+.cat-article-img-coupe-menstruelle {
+    background-image: url("/images/blog/coupe_menstruelle.jpg")
+}
+
+.cat-article-img-sport {
+    background-image: url("/images/blog/sport.jpg")
+}
+
 .cat-categorie-article-title {
     font-size: 20px;
     color: #D7534B;
@@ -62,6 +102,37 @@ a {
     color: black;
     margin-top: 20px;
     font-size: 25px;
+}
+
+@media (max-width: 1150px) {
+    .cat-article-title {
+        color: black;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .cat-article-description {
+        margin-top: 15px;
+        font-size: 10px;
+        color: black;
+    }
+}
+
+@media (min-width: 951px) {
+    .category-card { display: none }
+    .cat-row { display: flex }
+}
+
+@media (max-width: 950px) {
+    .category-card { display: flex }
+    .cat-row { display: none }
+}
+
+.card-title-category {
+    color: black;
+    margin: 15px 0 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .cat-article-description {
@@ -79,10 +150,18 @@ a {
 .cat-pagination {
     margin-top: 150px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .cat-pagination-btn {
     background-color: #DE9E91;
     padding: 10px 20px;
     color: white;
+}
+
+.cat-pagination-btn-activate {
+    color: #DE9E91;
+    padding: 10px 20px;
+    background-color: white;
+    border: #DE9E91 1px solid;
 }
