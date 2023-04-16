@@ -46,13 +46,21 @@ Route::get("/blog/article/{article_id}", function ($article_id) {
         case 3:
             return view("user.blog.third_article");
 
-        // Symptomes menstruels articles
+        // Protection articles
         case 4:
             return view("user.blog.fourth_article");
         case 5:
             return view("user.blog.fifth_article");
         case 6:
             return view("user.blog.sixth_article");
+
+        // Vivre avec ces règles articles
+        case 7:
+            return view("user.blog.seventh_article");
+        case 8:
+            return view("user.blog.eighth_article");
+        case 9:
+            return view("user.blog.ninth_article");
 
         default:
             return view("user.blog.home");
