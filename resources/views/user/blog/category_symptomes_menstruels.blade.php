@@ -52,7 +52,7 @@
             </div>
         </a>
 
-        <a href="/blog/articles">
+        <a href="/blog/article/2">
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-saignement cat-article-img"></div>
                 <div class="cat-col-8">
@@ -87,7 +87,7 @@
             </div>
         </a>
 
-        <a href="/blog/articles">
+        <a href="/blog/article/3">
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-saut-humeur cat-article-img"></div>
                 <div class="cat-col-8">

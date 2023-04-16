@@ -31,6 +31,7 @@ Route::get("/blog/category/{category_id}", function ($category_id) {
             return view("user.blog.category_protections");
         case 3:
             return view("user.blog.category_live_with_periods");
+
         default:
             return view("user.blog.home");
     }
@@ -39,6 +40,11 @@ Route::get("/blog/article/{article_id}", function ($article_id) {
     switch ($article_id) {
         case 1:
             return view("user.blog.first_article");
+        case 2:
+            return view("user.blog.second_article");
+        case 3:
+            return view("user.blog.third_article");
+
         default:
             return view("user.blog.home");
     }
