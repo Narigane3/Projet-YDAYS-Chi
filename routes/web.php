@@ -38,12 +38,21 @@ Route::get("/blog/category/{category_id}", function ($category_id) {
 });
 Route::get("/blog/article/{article_id}", function ($article_id) {
     switch ($article_id) {
+        // Symptomes menstruels articles
         case 1:
             return view("user.blog.first_article");
         case 2:
             return view("user.blog.second_article");
         case 3:
             return view("user.blog.third_article");
+
+        // Symptomes menstruels articles
+        case 4:
+            return view("user.blog.fourth_article");
+        case 5:
+            return view("user.blog.fifth_article");
+        case 6:
+            return view("user.blog.sixth_article");
 
         default:
             return view("user.blog.home");
