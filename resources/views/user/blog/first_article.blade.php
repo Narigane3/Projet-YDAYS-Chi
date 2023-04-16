@@ -90,11 +90,25 @@
         Pas de réfléxion au sujet de "Comment soulager les crampes menstruelles : astuces et remèdes naturels"
     </div>
 
-    <div class="art-form">
+    <form class="art-form" method="post">
         <div class="art-form-title">Laisser un commentaire au sujet de "Comment soulager les crampes menstruelles :
             astuces et remèdes naturels"
         </div>
-    </div>
+        <div class="art-add">
+            <textarea class="art-add-content" rows="5" cols="50"></textarea>
+
+            <input type="text" placeholder="Nom*" class="inputed art-add-width-60">
+            <input type="email" placeholder="Email*" class="inputed art-add-width-60">
+
+            <div style="display: flex; flex-direction: row; margin: 20px 0">
+                <input type="checkbox" id="register_mail-and_name" class="art-add-check">
+                <label for="register_mail-and_name">Enregistrer mon nom, mon e-mail pour mon prochain
+                    commentaire.</label>
+            </div>
+
+            <button type="button" class="btn art-add-btn art-add-width-60">Publier le commentaire</button>
+        </div>
+    </form>
 
     <div class="articles-content">
         <h2 class="articles-title"><strong>Nos derniers articles</strong></h2>
