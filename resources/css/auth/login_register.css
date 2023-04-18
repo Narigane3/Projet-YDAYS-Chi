@@ -1,0 +1,119 @@
+/* POSITION DES BLOCKS */
+.block {
+    height: 100vh
+}
+
+.block_auth {
+    background-color: #D7534B;
+}
+
+#block_auth_logo {
+    position: initial !important;
+    width: 2fr !important;
+}
+
+/*CUSTOM FORME*/
+button.w-100.btn.btn-lg.btn-primary.login {
+    background-color: #D7534B;
+    border-color: #D7534B;
+    border-radius: 1rem;
+}
+
+#login_email, #login_password {
+    background-color: rgba(93, 133, 138, 0.20);
+    border-radius: 1rem;
+    color: #4a5568;
+}
+
+#auth_logo {
+    border-radius: 1rem;
+    width: 80px;
+    margin-top: 3rem;
+}
+
+.btn_menu {
+    background-color: #DC7528;
+    color: white;
+}
+
+#illustration_bottom {
+    width: 10rem;
+}
+
+#illustration_bottom_content {
+    background-image: url('../../../public/images/illustration/illsutration_temps.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+button.btn.btn-outline-primary.btn_switch {
+    color: white !important;
+    border-color: white !important;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+button:hover.btn.btn-outline-primary:hover.btn_switch {
+    color: #DC7528 !important;
+    border-color: white !important;
+    background-color: white !important;
+}
+
+.mobile_switch_content {
+    padding: 3rem 0;
+    margin: 15rem 0;
+}
+
+/*********************************/
+/******** MEDIA QUERY ***********/
+/*******************************/
+
+
+/** Screen < 992px
+*/
+@media (max-width: 992px) {
+
+    .block {
+        height: auto;
+        transform: none !important;
+    }
+
+    .block .translate-middle {
+        transform: none;
+        margin-top: 10rem;
+    }
+
+    #block_form_auth {
+        position: static !important;
+        margin: auto !important;
+        transform: initial !important;
+        padding-top: 3rem;
+    }
+
+    #block_auth_register {
+        position: static !important;
+        margin-inline: auto;
+        padding-top: 3rem;
+    }
+
+}
+
+/** Screen > 992px
+*/
+@media (min-width: 992px) {
+
+    #block_auth_logo {
+        position: absolute !important;
+        top: 0;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

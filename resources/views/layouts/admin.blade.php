@@ -10,7 +10,7 @@
     <meta name="robot" content="noindex">
 
     <title>Chi - @yield('title')</title>
-    
+
     <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css">
 
     @vite('resources/js/app.js')
@@ -41,7 +41,7 @@
         <div class="d-flex flex-column flex-shrink-0 p-3 offcanvas offcanvas-start" id="admin_menu"
              style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-md-0 link-dark text-decoration-none">
-                <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="logo_menu">
+                <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo">
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">

@@ -16,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/maquette/auth',function (){
+    return view('login_register');
+});
+
+Route::get('/maquette/home',function (){
+    return view('home');
 });
 
 // BLOG REDIRECT
