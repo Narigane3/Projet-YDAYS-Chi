@@ -27,8 +27,56 @@ Route::get('/maquette/home',function (){
     return view('home');
 });
 
+// BLOG REDIRECT
+Route::get('/blog', function () {
+    return view('user.blog.home');
+});
+Route::get("/blog/category/{category_id}", function ($category_id) {
+    switch ($category_id) {
+        case 1:
+            return view("user.blog.category_symptomes_menstruels");
+        case 2:
+            return view("user.blog.category_protections");
+        case 3:
+            return view("user.blog.category_live_with_periods");
+
+        default:
+            return view("user.blog.home");
+    }
+});
+Route::get("/blog/article/{article_id}", function ($article_id) {
+    switch ($article_id) {
+        // Symptomes menstruels articles
+        case 1:
+            return view("user.blog.first_article");
+        case 2:
+            return view("user.blog.second_article");
+        case 3:
+            return view("user.blog.third_article");
+
+        // Protection articles
+        case 4:
+            return view("user.blog.fourth_article");
+        case 5:
+            return view("user.blog.fifth_article");
+        case 6:
+            return view("user.blog.sixth_article");
+
+        // Vivre avec ces règles articles
+        case 7:
+            return view("user.blog.seventh_article");
+        case 8:
+            return view("user.blog.eighth_article");
+        case 9:
+            return view("user.blog.ninth_article");
+
+        default:
+            return view("user.blog.home");
+    }
+});
+
 // REDIRECT USER AFTER THE LOG
-Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function (){
+Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {
     Route::get('/home', function () {
         return view('welcome');
     });
@@ -39,7 +87,6 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::get('/admin', function () {
         return view('admin.home');
     });
-
 
 
 });

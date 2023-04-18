@@ -1,0 +1,167 @@
+.cat-img {
+    margin: 0 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 550px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.cat-texte {
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    bottom: 0;
+    left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .cat-texte {
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        bottom: 0;
+        left: 20px;
+    }
+}
+
+.card-text-category {
+    color: black;
+}
+
+.cat-texte-mobile {
+    color: black;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .cat-texte-mobile {
+        color: black;
+        font-size: 25px;
+        margin-left: 10%;
+        margin-bottom: 15px;
+    }
+}
+
+.cat-articles {
+    margin: 0 10%;
+}
+
+.cat-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+}
+
+.cat-col-2 {
+    flex-direction: column;
+    width: 30%;
+}
+
+.cat-col-8 {
+    flex-direction: column;
+    width: 70%;
+    margin-left: 100px;
+}
+
+.cat-article-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 450px;
+    height: 300px;
+}
+
+.cat-article-img-crampe-menstruelle { background-image: url("/images/blog/crampe_menstruelle.jpg") }
+.cat-article-img-saignement { background-image: url("/images/blog/saignement.jpg") }
+.cat-article-img-saut-humeur { background-image: url("/images/blog/saut_humeur.jpg") }
+
+.cat-article-img-coupe-menstruelle { background-image: url("/images/blog/coupe_menstruelle.jpg") }
+.cat-article-img-tampon-bio { background-image: url("/images/blog/tampon_bio.jpg") }
+.cat-article-img-serviette { background-image: url("/images/blog/serviette.jpg") }
+
+.cat-article-img-sport { background-image: url("/images/blog/sport.jpg") }
+.cat-article-img-voyage { background-image: url("/images/blog/voyage.jpg") }
+.cat-article-img-regles-travail { background-image: url("/images/blog/regles_travail.jpg") }
+
+.cat-categorie-article-title {
+    font-size: 20px;
+    color: #D7534B;
+}
+
+.cat-article-title {
+    color: black;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+@media (max-width: 1150px) {
+    .cat-article-title {
+        color: black;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .cat-article-description {
+        margin-top: 15px;
+        font-size: 10px;
+        color: black;
+    }
+}
+
+@media (min-width: 951px) {
+    .category-card { display: none }
+    .cat-row { display: flex }
+}
+
+@media (max-width: 950px) {
+    .category-card { display: flex }
+    .cat-row { display: none }
+}
+
+.card-title-category {
+    color: black;
+    margin: 15px 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cat-article-description {
+    margin-top: 15px;
+    font-size: 15px;
+    color: black;
+}
+
+.cat-article-date {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #E6DBD7;
+}
+
+.cat-pagination {
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cat-pagination-btn {
+    background-color: #DE9E91;
+    padding: 10px 20px;
+    color: white;
+}
+
+.cat-pagination-btn-activate {
+    color: #DE9E91;
+    padding: 10px 20px;
+    background-color: white;
+    border: #DE9E91 1px solid;
+}

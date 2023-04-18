@@ -1,0 +1,181 @@
+/* Desktop to Mobile */
+@media (max-width: 900px) {
+    .home-desktop { display: none }
+    .page-title-desktop { display: none }
+    .home-mobile { display: block }
+    .page-title-mobile { display: block }
+    .categories { flex-direction: column }
+    .articles { flex-direction: column }
+}
+
+/* Mobile to Desktop */
+@media (min-width: 901px) {
+    .home-desktop { display: flex }
+    .page-title-desktop { display: flex }
+    .home-mobile { display: none }
+    .page-title-mobile { display: none }
+    .page-title-desktop { font-size: 60px; }
+    .categories { flex-direction: row }
+    .articles { flex-direction: row }
+}
+
+.home-desktop {
+    position: relative;
+    padding: 4em 8em 0 8em;
+    margin-bottom: 60px;
+}
+
+.page-title-desktop {
+    position: absolute;
+    bottom: 10px;
+    left: 145px;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.home-mobile {
+    padding: 1em;
+    margin-bottom: 60px;
+}
+
+.page-title-mobile {
+    color: black;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .page-title-desktop { font-size: 100px; }
+}
+
+@media (min-width: 1400px) {
+    .page-title-desktop { font-size: 115px; }
+}
+
+.categories-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9CB9BE;
+    padding-top: 25px;
+}
+
+.categories-title {
+    margin-bottom: 22px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto 45px auto;
+}
+
+@media (min-width: 401px) {
+    .card-img {
+        margin: 0 35px;
+        max-height: 550px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-img {
+        margin: 0 35px;
+        max-height: 550px;
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 450px) {
+    .img-size {
+        height: 500px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 449px) {
+    .img-size {
+        height: 400px;
+        width: 250px;
+    }
+}
+
+.card-full-img {
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 10px 16px;
+}
+
+.img-symptomes-menstruels { background-image: url("/images/blog/symptomes_menstruels.jpg"); }
+
+.img-protection { background-image: url("/images/blog/protections.jpg"); }
+
+.img-vivre-regles { background-image: url("/images/blog/vivre_avec_ces_regles.jpg"); }
+
+.title-card-full-img {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+}
+
+.badge-voir {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    bottom: 45px;
+    background-color: #DE9E91;
+    padding: 0 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.articles-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-top: 25px;
+}
+
+.articles-title {
+    margin-bottom: 22px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto 45px auto;
+}
+
+.card {
+    margin: 10px 16px;
+}
+
+.card-title {
+    color: #D7534B;
+    font-size: 20px;
+}
+
+.card-text {
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: large;
+    line-height: 130%;
+}
+
+.card-date {
+    color: #E6DBD7;
+}
