@@ -36,7 +36,7 @@
                     <h2>Qui est chi ?</h2>
                 </div>
                 <div class="d-lg-flex">
-                    <div class="about_picture col-md-6">
+                    <div class="about_picture col-lg-6">
                         <img src="{{url('images/illustration/home/grouped_woman.jpg')}}"
                              alt="illustration d'un groupe de femme">
                     </div>
@@ -230,12 +230,12 @@
         <section class="join_now">
             <div class="d-md-flex flex-row">
                 <div class="join_now_picture col-md-6">
-                    <img src="{{url('images/illustration/home/accueil_calendrier.svg')}}">
+                    <img src="{{url('images/illustration/home/accueil_calendrier.svg')}}" alt="Calendrier">
                 </div>
 
                 <div class="join_now_form col-md-6">
                     <div class="join_now_title text-center">
-                        <h2>Rejoin nous !</h2>
+                        <h2>Rejoignez nous !</h2>
                     </div>
                     <form>
                         <div class="mb-3">
@@ -271,7 +271,7 @@
                     $date =["03 décembre 2022","28 mars 2023","31 mars 2023"]
                 @endphp
                 @foreach($titres as $key => $titre )
-                    <div class="card actu-items" style="width: 18rem;">
+                    <div class="card actu-items col-6" style="width: 18rem;">
                         <img src="{{url($images[$key])}}" class="card-img-top" alt="article image">
                         <div class="card-body">
                             <h5 class="card-title">{{$titre}}</h5>

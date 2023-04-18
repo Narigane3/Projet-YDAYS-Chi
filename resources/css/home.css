@@ -15,7 +15,7 @@
     *******/
 #home_header {
     background-color: white;
-    background-image: url('../images/home/tel_photo.svg');
+    background-image: url('/public/images/home/tel_photo.svg');
     background-repeat: no-repeat;
     width: 100vw;
     padding-bottom: 4rem;
@@ -38,7 +38,7 @@
 #home_header_title h1 {
     font-family: Impact, serif;
     font-weight: bolder;
-    font-size: calc(3rem + .8vw)
+    font-size: calc(5rem + .8vw)
 }
 
 #home_header_title .second_part_title {
@@ -343,7 +343,7 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
 
 @media (min-width: 500px) {
     #home_header {
-        background-image: url('../images/home/ipad_accueil.svg');
+        background-image: url('/public/images/home/ipad_accueil.svg');
         width: 100vw;
         background-size: 100%;
         margin-top: 100px;
@@ -400,7 +400,7 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
 
 @media (min-width: 992px) {
     #home_header {
-        background-image: url('../images/home/page accueil_photocalendrier.svg');
+        background-image: url('/public/images/home/page accueil_photocalendrier.svg');
         background-size: 100%;
         margin-top: 95px;
         padding-bottom: calc(5rem + 5vw);
@@ -438,9 +438,13 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
         font-size: calc(1rem + 1vw);
         width: 100%;
     }
+
     /**
     * About us
      */
+    .about_content{
+        padding: 7rem 0;
+    }
     .about_content .about_picture {
         width: 50vw;
     }
