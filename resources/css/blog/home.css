@@ -110,11 +110,11 @@
     margin: 10px 16px;
 }
 
-.img-symptomes-menstruels { background-image: url("/images/blog/symptomes_menstruels.jpg"); }
+.img-symptomes-menstruels { background-image: url("/public/images/blog/symptomes_menstruels.jpg"); }
 
-.img-protection { background-image: url("/images/blog/protections.jpg"); }
+.img-protection { background-image: url("/public/images/blog/protections.jpg"); }
 
-.img-vivre-regles { background-image: url("/images/blog/vivre_avec_ces_regles.jpg"); }
+.img-vivre-regles { background-image: url("/public/images/blog/vivre_avec_ces_regles.jpg"); }
 
 .title-card-full-img {
     text-align: center;

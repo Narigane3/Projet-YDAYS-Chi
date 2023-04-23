@@ -35,7 +35,7 @@
     background-position: center;
     width: 200px;
     height: 200px;
-    background-image: url("/images/blog/persona.jpg");
+    background-image: url("/public/images/blog/persona.jpg");
     border-radius: 50%;
 }
 
@@ -68,7 +68,7 @@
     background-position: center;
     width: 400px;
     height: 400px;
-    background-image: url("/images/blog/contenu_articles.jpg");
+    background-image: url("/public/images/blog/contenu_articles.jpg");
 }
 
 .art-second-part-title {

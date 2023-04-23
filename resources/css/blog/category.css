@@ -81,17 +81,17 @@ a {
     height: 300px;
 }
 
-.cat-article-img-crampe-menstruelle { background-image: url("/images/blog/crampe_menstruelle.jpg") }
-.cat-article-img-saignement { background-image: url("/images/blog/saignement.jpg") }
-.cat-article-img-saut-humeur { background-image: url("/images/blog/saut_humeur.jpg") }
+.cat-article-img-crampe-menstruelle { background-image: url("/public/images/blog/crampe_menstruelle.jpg") }
+.cat-article-img-saignement { background-image: url("/public/images/blog/saignement.jpg") }
+.cat-article-img-saut-humeur { background-image: url("/public/images/blog/saut_humeur.jpg") }
 
-.cat-article-img-coupe-menstruelle { background-image: url("/images/blog/coupe_menstruelle.jpg") }
-.cat-article-img-tampon-bio { background-image: url("/images/blog/tampon_bio.jpg") }
-.cat-article-img-serviette { background-image: url("/images/blog/serviette.jpg") }
+.cat-article-img-coupe-menstruelle { background-image: url("/public/images/blog/coupe_menstruelle.jpg") }
+.cat-article-img-tampon-bio { background-image: url("/public/images/blog/tampon_bio.jpg") }
+.cat-article-img-serviette { background-image: url("/public/images/blog/serviette.jpg") }
 
-.cat-article-img-sport { background-image: url("/images/blog/sport.jpg") }
-.cat-article-img-voyage { background-image: url("/images/blog/voyage.jpg") }
-.cat-article-img-regles-travail { background-image: url("/images/blog/regles_travail.jpg") }
+.cat-article-img-sport { background-image: url("/public/images/blog/sport.jpg") }
+.cat-article-img-voyage { background-image: url("/public/images/blog/voyage.jpg") }
+.cat-article-img-regles-travail { background-image: url("/public/images/blog/regles_travail.jpg") }
 
 .cat-categorie-article-title {
     font-size: 20px;
