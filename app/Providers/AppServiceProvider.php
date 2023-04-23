@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         Paginator::useBootstrapFour();
+
         if (env('REDIRECT_HTTPS')) {
             $this->app['request']->server->set('HTTPS', 'on');
         }
