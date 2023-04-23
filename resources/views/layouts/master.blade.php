@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-light position-absolute top-0 start-0" id="master_nav">
         <div class="container-fluid">
             <div id="logo_master_nav_content">
-                <img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo">
+                <a href="/"><img src="{{url("/images/logo/logo-chi.svg")}}" alt="logo chi" id="menu_logo"></a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
@@ -26,6 +26,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-end">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </div>
+                <div class="navbar-nav text-end">
+                    <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
                 </div>
             </div>
         </div>
@@ -89,14 +92,9 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Lorem ipsum dolor sit
-                        amet, consectetur
-                        adipiscing elit, sed do
-                        eiusmod tempor
-                        incididunt ut labore et
-                        dolore magna aliqua. Ut
-                        enim ad minim veniam,
-                        quis nostrud exercitation
+                        Avec Chi, tu recevras un calendrier menstruel physique avec abonnement rempli de surprises pour
+                        chaque jour de tes règles. Tu pourras ouvrir une pochette chaque jour et découvrir des
+                        accessoires qui t’aideront à soulager tes douleurs et tes tracas.
                     </div>
                 </div>
             </div>
@@ -110,7 +108,11 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Voir +
+                        <ul class="list-unstyled">
+                            <li><a href="{{url('blog/category/1')}}">Symptômes menstruels</a></li>
+                            <li><a href="{{url('blog/category/2')}}">Les protections</a></li>
+                            <li><a href="{{url('blog/category/3')}}">Vivre avec ces règles</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -123,12 +125,9 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                      data-bs-parent="#accordionExample">
+
                     <div class="accordion-body">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Catégorie 1</a></li>
-                            <li><a href="#">Catégorie 2</a></li>
-                            <li><a href="#">Catégorie 3</a></li>
-                        </ul>
+                        <a href="#">En savoir +</a>
                     </div>
                 </div>
             </div>
@@ -149,14 +148,9 @@
                 {{-- COLUMUN 1--}}
                 <div class="col sub_content">
                     <h4>Qui est chi ?</h4>
-                    <p> Lorem ipsum dolor sit
-                        amet, consectetur
-                        adipiscing elit, sed do
-                        eiusmod tempor
-                        incididunt ut labore et
-                        dolore magna aliqua. Ut
-                        enim ad minim veniam,
-                        quis nostrud exercitation</p>
+                    <p> Chi est un fabricant de calendriers menstruels éthiques, naturels et respectueux de
+                        l’environnement.</p>
+                    <a href="/#qui-est-chi">En savoir +</a>
                 </div>
 
                 {{--COLUMUN 2--}}
@@ -164,7 +158,7 @@
                     <div class="content_col">
                         <div class="col sub_content">
                             <h4>Calendrier</h4>
-                            <p>Voir +</p>
+                            <a href="#">En savoir +</a>
                         </div>
                     </div>
                     <div class="network_desktop_footer sub_content">
@@ -199,15 +193,15 @@
                         <div class="col sub_content">
                             <h4>Article</h4>
                             <ul class="list-unstyled">
-                                <li><p>catégorie 1</p></li>
-                                <li><p>catégorie 2</p></li>
-                                <li><p>catégorie 3</p></li>
+                                <li><a href="{{url('blog/category/1')}}">Symptômes menstruels</a></li>
+                                <li><a href="{{url('blog/category/2')}}">Les protections</a></li>
+                                <li><a href="{{url('blog/category/3')}}">Vivre avec ces règles</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="content_bottom sub_content">
                         <h4>Faq</h4>
-                        <p>Voir +</p>
+                        <a href="#">En savoir +</a>
                     </div>
                 </div>
             </div>

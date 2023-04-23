@@ -1,4 +1,4 @@
-@extends("layouts.admin")
+@extends("layouts.master")
 
 @section('title', "Blog article")
 
@@ -9,9 +9,9 @@
 @section('content')
     <div class="art-category-title">Les protections</div>
     <div class="cat-texte-mobile" style="margin-right: 10%">
-        <strong>Les protections menstruelles : lesquelles choisir ?</strong>
+        <strong>Les serviettes hygiéniques lavables : une alternative écologique et économique</strong>
     </div>
-    <div class="cat-img" style="background-image: url('/images/blog/coupe_menstruelle.jpg')"></div>
+    <div class="cat-img" style="background-image: url('/images/blog/serviette.jpg')"></div>
 
     <div class="article-content">
         <div class="art-first-part">
@@ -21,55 +21,58 @@
             </div>
             <div class="art-first-description">
                 <p>
-                    Les menstruations sont une partie normale de la vie de nombreuses femmes, et choisir la protection
-                    hygiénique qui convient le mieux peut être une décision importante. Avec une variété d'options
-                    disponibles sur le marché, il peut être déroutant de savoir laquelle choisir. Nous allons vous
-                    donner des conseils pour vous aider à choisir les différentes protections menstruelles qui convient
-                    le mieux à votre corps et à votre style de vie.
+                    Les serviettes hygiéniques lavables sont de plus en plus populaires auprès des femmes qui cherchent
+                    une option écologique et confortable pour gérer leurs menstruations. Contrairement aux serviettes
+                    jetables, les serviettes hygiéniques réutilisables sont fabriquées à partir de tissus lavables et
+                    durables, ce qui permet de réduire la quantité de déchets générés et de minimiser leur impact sur
+                    l'environnement. Dans cet article, nous vous expliquerons ce qu'elles sont, comment les utiliser et
+                    les entretenir, ainsi que les avantages écologiques et financiers de cette option.
                 </p>
             </div>
         </div>
         <div class="art-second-part">
             <div class="art-second-part-description">
-                <div class="art-second-part-title">1°Tampons :</div>
-                <div class="art-second-part-content">Les tampons sont généralement faits de coton et sont disponibles
-                    dans différentes tailles, niveaux d'absorption et styles, tels que les tampons avec ou sans
-                    applicateur. Les tampons sont pratiques pour une utilisation discrète et active, comme la natation
-                    ou le sport.
+                <div class="art-second-part-title">Qu'est-ce que sont les serviettes hygiéniques lavables ?</div>
+                <div class="art-second-part-content">Les serviettes hygiéniques lavables sont des protections
+                    menstruelles réutilisables fabriquées à partir de tissus absorbants, tels que le coton biologique,
+                    le bambou ou le chanvre, et d'une couche imperméable à base de polyuréthane laminé (PUL) pour éviter
+                    les fuites. Elles sont conçues pour être portées à l'intérieur de la culotte, et sont généralement
+                    fixées en place à l'aide de boutons pression ou de clips.
                 </div>
 
-                <div class="art-second-part-title">2°Serviettes hygiéniques :</div>
-                <div class="art-second-part-content">Les serviettes hygiéniques sont des protections menstruelles qui se
-                    fixent à l'intérieur de la culotte. Elles sont généralement fabriquées à partir de matériaux
-                    absorbants et sont disponibles dans différents niveaux d'absorption et de tailles. Les serviettes
-                    hygiéniques sont faciles à utiliser et conviennent à celles qui préfèrent ne pas insérer de tampons.
-                </div>
-
-                <div class="art-second-part-title">3°Coupes menstruelles :</div>
-                <div class="art-second-part-content">Les coupes menstruelles sont des protections réutilisables en forme
-                    de coupe qui sont insérées dans le vagin. Elles sont généralement en silicone médical et peuvent
-                    être utilisées pendant de nombreuses années, ce qui en fait une option écologique et économique. Les
-                    coupes menstruelles nécessitent une certaine familiarisation pour une insertion et une utilisation
-                    appropriées, mais offrent une protection fiable et sans fuite.
-                </div>
-
-                <div class="art-second-part-title">4°Protections périodiques en tissu :</div>
+                <div class="art-second-part-title">Comment les utiliser et les entretenir ?</div>
                 <div class="art-second-part-content">
-                    Les protections périodiques en tissu, comme les culottes menstruelles en tissu ou les serviettes
-                    hygiéniques en tissu, sont des options lavables et réutilisables pour gérer le flux menstruel. Elles
-                    sont fabriquées à partir de tissus absorbants et peuvent être portées comme des sous-vêtements ou se
-                    fixer à l'intérieur de la culotte. Les protections périodiques en tissu sont respectueuses de
-                    l'environnement et peuvent être une option confortable et économique pour certaines personnes.
+                    Pour utiliser les serviettes hygiéniques lavables, il suffit de les placer à l'intérieur de la
+                    culotte, avec la face absorbante contre la peau, et de les fixer en place à l'aide des boutons
+                    pression ou des clips. Elles doivent être changées régulièrement, en fonction de votre flux
+                    menstruel, et peuvent être lavées à la main ou en machine après utilisation.
                 </div>
-
-                <div class="art-second-part-title">Attention :</div>
                 <div class="art-second-part-content">
-                    Il est important de se rappeler que chaque femme est différente, et ce qui fonctionne pour l'une
-                    peut ne pas fonctionner pour une autre. Il n'y a pas de solution unique pour tout le monde en
-                    matière de protections menstruelles, il s'agit de trouver celle qui convient le mieux à votre corps,
-                    à votre mode de vie et à vos préférences personnelles.
+                    Pour les entretenir, il est recommandé de les rincer à l'eau froide immédiatement après utilisation
+                    pour éliminer le sang, puis de les laver à l'eau tiède avec un savon doux. Il est important de
+                    suivre les instructions de lavage du fabricant pour préserver leur qualité et leur durabilité. Les
+                    serviettes hygiéniques lavables peuvent être séchées à l'air libre ou en machine à basse
+                    température.
                 </div>
 
+                <div class="art-second-part-title">Les avantages écologiques et financiers des serviettes hygiéniques
+                    lavables
+                </div>
+                <div class="art-second-part-content">
+                    L'un des principaux avantages des serviettes hygiéniques lavables est leur impact positif sur
+                    l'environnement. Contrairement aux serviettes jetables qui sont souvent fabriquées à partir de
+                    matériaux non biodégradables et génèrent une quantité importante de déchets, les serviettes
+                    hygiéniques réutilisables permettent de réduire la quantité de déchets envoyés dans les décharges.
+                    De plus, elles sont souvent fabriquées à partir de matériaux durables et naturels, ce qui les rend
+                    plus écologiques.
+                </div>
+                <div class="art-second-part-content">
+                    En ce qui concerne les avantages financiers, bien que le coût initial des serviettes hygiéniques
+                    lavables puisse être plus élevé que celui des serviettes jetables, à long terme, elles peuvent être
+                    plus économiques. En effet, les serviettes lavables sont réutilisables pendant plusieurs années, ce
+                    qui permet de réaliser des économies sur le long terme en évitant d'acheter régulièrement des
+                    serviettes jetables.
+                </div>
             </div>
             <div
                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">

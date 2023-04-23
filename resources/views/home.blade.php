@@ -1,6 +1,6 @@
 {{-- Callback layout master  --}}
 @extends('layouts.master')
-<?php $images = ['/images/home/actu/coupe_menstruelle.jpg', '/images/home/actu/sport.jpg', '/images/home/actu/coupe_menstruelle.jpg'] ?>
+
 @section('head')
     {{-- Give more info into head --}}
     {{-- Not index this page form Google --}}
@@ -32,7 +32,7 @@
 
         <section id="home_about">
             <div class="about_content">
-                <div class="about_title">
+                <div class="about_title" id="qui-est-chi">
                     <h2>Qui est chi ?</h2>
                 </div>
                 <div class="d-lg-flex">
@@ -268,19 +268,26 @@
                 class="actu_content container d-flex flex-column flex-md-row flex-wrap align-items-center justify-content-md-between">
                 @php
                     $titres =["Symptômes menstruels","Les protections","Vivre avec ses règle"];
-                    $date =["03 décembre 2022","28 mars 2023","31 mars 2023"]
+                    $date =["05 décembre 2022","05 décembre 2022","05 décembre 2022",];
+                    $content = ["Comment soulager les crampes menstruelles : astuces et remèdes naturels",
+                    "Les protections menstruelles : lesquelles choisir ?","Le sport et les règles : comment bien s’entraîner pendant cette période ?"];
+                    $link= ["/blog/article/1","/blog/article/4","/blog/article/7"];
+                    $images = ['/images/blog/crampe_menstruelle.jpg', '/images/home/actu/coupe_menstruelle.jpg', '/images/home/actu/sport.jpg',]
                 @endphp
                 @foreach($titres as $key => $titre )
-                    <div class="card actu-items col-6" style="width: 18rem;">
-                        <img src="{{url($images[$key])}}" class="card-img-top" alt="article image">
+                    <div class="card actu-items col">
+                        <div class="img-fluid">
+                            <img src="{{url($images[$key])}}" class="card-img-top" alt="article image">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{$titre}}</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
+                            <div class="actu_body_content">
+                                <h5 class="card-title">{{$titre}}</h5>
+                                <p class="card-text">{{$content[$key]}}</p>
+                            </div>
                             <span class="card-date">Le {{$date[$key]}}</span>
                             <div class="d-flex flex-row align-items-center">
-                                <a href="#" class="btn btn-primary btn-custom btn-actu">En savoir +</a>
+                                <a href="{{url($link[$key])}}" class="btn btn-primary btn-custom btn-actu">En
+                                    savoir +</a>
                             </div>
                         </div>
                     </div>
@@ -289,7 +296,7 @@
             </div>
 
             <div class="text-center mb-5 col-12">
-                <a class="btn btn-primary btn-custom btn-actu btn-more-actu">Voire d'autre articles</a>
+                <a class="btn btn-primary btn-custom btn-actu btn-more-actu" href="/blog">Voire d'autre articles</a>
             </div>
 
         </section>

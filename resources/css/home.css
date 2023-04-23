@@ -38,7 +38,7 @@
 #home_header_title h1 {
     font-family: Impact, serif;
     font-weight: bolder;
-    font-size: calc(5rem + .8vw)
+    font-size: calc(3.4rem + .8vw)
 }
 
 #home_header_title .second_part_title {
@@ -346,7 +346,10 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
         background-image: url('/public/images/home/ipad_accueil.svg');
         width: 100vw;
         background-size: 100%;
-        margin-top: 100px;
+    }
+
+    #home_header_title h1 {
+        font-size: calc(5rem + .8vw)
     }
 
     .home_space {
@@ -396,13 +399,20 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
     .join_now .join_now_rpg_content {
         width: 30vw;
     }
+
+    /************************
+            ACTUALITIES
+     */
+    .actu_body_content {
+        min-height: 200px;
+    }
+
 }
 
 @media (min-width: 992px) {
     #home_header {
         background-image: url('/public/images/home/page accueil_photocalendrier.svg');
         background-size: 100%;
-        margin-top: 95px;
         padding-bottom: calc(5rem + 5vw);
         overflow: hidden;
     }

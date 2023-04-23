@@ -1,4 +1,4 @@
-@extends("layouts.admin")
+@extends("layouts.master")
 
 @section('title', "Blog catégorie")
 
@@ -119,14 +119,15 @@
                 </div>
             </div>
         </a>
-
         <div class="cat-pagination">
-            <div class="btn-group me-2" role="group" aria-label="First group">
-                <a type="button" class="btn cat-pagination-btn"><strong>1</strong></a>
-                <a type="button" class="btn cat-pagination-btn-activate"><strong>2</strong></a>
-                <a type="button" class="btn cat-pagination-btn"><strong>3</strong></a>
-                <a type="button" class="btn cat-pagination-btn"><strong>4</strong></a>
-            </div>
+            @if(false)
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                    <a type="button" class="btn cat-pagination-btn"><strong>1</strong></a>
+                    <a type="button" class="btn cat-pagination-btn-activate"><strong>2</strong></a>
+                    <a type="button" class="btn cat-pagination-btn"><strong>3</strong></a>
+                    <a type="button" class="btn cat-pagination-btn"><strong>4</strong></a>
+                </div>
+            @endif
         </div>
     </div>
 @stop

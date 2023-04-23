@@ -8,6 +8,10 @@ html {
     font-style: normal;
 }
 
+body{
+    margin-top: 100px;
+}
+
 /* Titre */
 h5 {
     font-size: 1rem;
@@ -162,6 +166,10 @@ footer {
     height: auto;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
 /****************
     REINSURANCE
 ****/
@@ -288,6 +296,9 @@ footer .accordion-body a {
     color: white;
 }
 
+footer .accordion-body a:hover {
+    text-decoration: underline;
+}
 
 /*****************
     MENU FOOTER 3
@@ -390,6 +401,16 @@ footer .desktop_footer {
     footer .desktop_footer .sub_content p {
         max-width: 12rem;
         font-size: .8rem;
+    }
+
+    footer .desktop_footer .sub_content a {
+        justify-content: start;
+        text-decoration: none;
+        color: white;
+    }
+
+    footer .desktop_footer .sub_content a:hover {
+        text-decoration: underline;
     }
 
     /************
