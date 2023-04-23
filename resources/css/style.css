@@ -9,7 +9,7 @@ html {
 }
 
 body{
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 /* Titre */
@@ -387,6 +387,11 @@ footer .desktop_footer {
         width: 255px;
         height: auto;
         padding-left: 5rem;
+    }
+
+    footer .logo_footer img {
+        width: 100%;
+        height: auto;
     }
 
     footer .desktop_footer .sub_content {
