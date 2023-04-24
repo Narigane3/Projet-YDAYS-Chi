@@ -19,12 +19,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/maquette/auth',function (){
+Route::get('/maquette/auth', function () {
     return view('login_register');
 });
 
-Route::get('/maquette/home',function (){
+Route::get('/maquette/home', function () {
     return view('home');
+});
+
+Route::get('/politique-de-confidentialite', function () {
+    return view('privacy_policy');
 });
 
 // BLOG REDIRECT

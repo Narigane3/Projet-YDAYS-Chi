@@ -211,7 +211,8 @@
         <div class="menu_footer_3">
             <div class="text-center"><a href="#" class="link_menu_footer">Mention légales</a></div>
             <div class="text-center"><a href="#" class="link_menu_footer">Condition générales d'utilisation</a></div>
-            <div class="text-center"><a href="#" class="link_menu_footer">Données personnelles</a></div>
+            <div class="text-center"><a href="/politique-de-confidentialite" target="_blank" class="link_menu_footer">Données
+                    personnelles</a></div>
         </div>
 
     @show

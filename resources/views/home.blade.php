@@ -4,10 +4,9 @@
 @section('head')
     {{-- Give more info into head --}}
     {{-- Not index this page form Google --}}
-    <meta name="robot" content="noindex">
 @stop
 
-@section('title', 'Page de connection')
+@section('title', 'Page d\'accueil')
 
 @section('navbar')
     @parent
@@ -249,8 +248,10 @@
                                 <input type="checkbox" class="form-check-input rgpd_acceptation">
                                 <label class="form-check-label join_now_rpg" for="rgpd_acceptation">j'accepte
                                     l'utilisation
-                                    des données conformément à notre <a href="#">politique de
-                                        confidentialité</a></label>
+                                    des données conformément à notre
+                                    <a href="/politique-de-confidentialite" class="d-inline-block"
+                                       target="_blank">politique de confidentialité</a>
+                                </label>
                             </div>
                         </div>
 
