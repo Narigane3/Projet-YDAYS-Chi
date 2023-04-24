@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{url("/images/logo/logo-chi.svg")}}">
     <title>Chi - @yield('title')</title>
     <link rel="stylesheet" href="https://use.typekit.net/rzo4cyf.css">
-    <link rel="">
     @vite('resources/js/app.js')
     @section('head')
     @show
