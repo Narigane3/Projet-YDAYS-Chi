@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <div class="home-desktop" style="padding: 0; margin-top: 35px">
+    <div class="home-desktop" style="padding: 0; margin-top: 135px">
         <div class="cat-img img-symptomes-menstruels">
             <div class="cat-texte"><strong>Symptômes menstruels</strong></div>
         </div>
