@@ -20,6 +20,7 @@
     width: 100% !important;
     padding-bottom: 4rem;
     overflow: hidden;
+    margin-top: 90px;
 }
 
 .home_space {
@@ -28,7 +29,7 @@
 }
 
 #home_header_title {
-    width: 50vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +51,8 @@
 }
 
 .home_header_content{
-    width: 90vw;
     overflow: hidden;
+    margin-inline: auto;
 }
 
 .header_cta {
@@ -414,9 +415,11 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
 }
 
 @media (min-width: 992px) {
+
     #home_header {
         background-image: url('/public/images/home/page accueil_photocalendrier.svg');
         background-size: 100%;
+        width: 90vw;
         padding-bottom: calc(5rem + 5vw);
         overflow: hidden;
     }
@@ -430,12 +433,15 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
         width: 100%;
     }
 
+
     #home_header_title{
+        width: 50%;
         display: block;
         position: relative;
         left: 15%;
         top: 20%;
         font-size: calc(1.5rem + 2vw);
+        margin-top: 7rem;
     }
 
     #home_header_title h1{
@@ -447,7 +453,12 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
         position: relative;
         left: 15%;
         top: 20%;
-        font-size: calc(1rem + 1vw);
+    }
+
+    .header_cta a{
+        font-size: calc(.5rem + .3vw);
+        padding: 1rem 2rem;
+        margin: 1rem;
     }
 
     /**
@@ -486,5 +497,9 @@ a:hover.btn.btn-primary.btn-custom.btn-actu.btn-more-actu {
     .carousel-control-prev:hover{
         opacity: 1;
     }
+
+}
+
+@media screen and (min-width: 2000px) {
 
 }

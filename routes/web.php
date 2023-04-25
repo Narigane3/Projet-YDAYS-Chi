@@ -19,14 +19,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/maquette/auth', function () {
-    return view('login_register');
-});
-
-Route::get('/maquette/home', function () {
-    return view('home');
-});
-
 Route::get('/politique-de-confidentialite', function () {
     return view('privacy_policy');
 });
@@ -62,7 +54,7 @@ Route::get("/blog/article/{article_id}", function ($article_id) {
 // REDIRECT USER AFTER THE LOG
 Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {
     Route::get('/home', function () {
-        return view('welcome');
+        return view('home');
     });
 });
 

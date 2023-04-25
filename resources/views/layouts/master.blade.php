@@ -25,12 +25,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-end">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                 </div>
                 <div class="navbar-nav text-end">
-                    <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+                    <a class="nav-link" aria-current="page" href="/blog">Blog</a>
                 </div>
+                @if (Route::has('login'))
+                    @auth
+                        {{-- Form de logout --}}
+                        <form action="/logout" method="POST" ref="form">
+                            @csrf
+                            <input type="hidden" value="{{ route('logout') }}">
+                            <div class="navbar-nav text-end">
+                                <input type="submit" class="nav-link" value="Se déconnecter">
+                            </div>
+                        </form>
+                        </span>
+                    @else
+                        <div class="navbar-nav text-end">
+                            <a href="{{ route('login') }}" class="nav-link">
+                                Se connecter / Créer un compte
+                            </a>
+                        </div>
+                    @endauth
             </div>
+            @endif
         </div>
     </nav>
 @show
