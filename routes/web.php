@@ -27,6 +27,10 @@ Route::get('/politique-de-confidentialite', function () {
     return view('privacy_policy');
 });
 
+Route::get('/conditions-generales-d-utilisation', function () {
+    return view('terms_of_use');
+});
+
 // BLOG REDIRECT
 Route::get('/blog', function () {
     return view('blog.home');

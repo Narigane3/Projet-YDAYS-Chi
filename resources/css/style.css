@@ -495,6 +495,27 @@ footer .desktop_footer {
 
 }
 
+/*****************
+    Terms and conditions
+****/
+#terms_of_use,#privacy_policy{
+    margin-top: 5rem !important;
+}
+
+
+#terms_of_use a {
+    display: inline-block;
+    margin-left: .5rem;
+    color: #DC7528;
+}
+
+#terms_of_use a:hover {
+    text-decoration: underline;
+}
+
+#terms_of_use a:active {
+    color: #DC7528;
+}
 
 @media screen and (min-width: 1200px ) {
 

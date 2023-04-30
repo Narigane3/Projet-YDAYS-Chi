@@ -24,7 +24,7 @@
                     <h1>Calendrier<span class="second_part_title">Menstruel</span></h1>
                 </div>
                 <div class="header_cta">
-                    <a class="btn" href="#">je commande mon calendrier <i class="bi bi-chevron-double-right"></i></a>
+                    <a class="btn" href="/blog">Je découvre le blog <i class="bi bi-chevron-double-right"></i></a>
                 </div>
             </div>
         </section>
@@ -61,7 +61,7 @@
 
                     </div>
                 </div>
-                <a href="#" class="btn about_cta">En savoir +</a>
+                <a href="#" class="btn about_cta d-none">En savoir +</a>
 
             </div>
         </section>
