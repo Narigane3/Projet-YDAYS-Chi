@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get("/inscription", function () {
+    return view("auth.inscription");
+});
+
 Route::get('/politique-de-confidentialite', function () {
     return view('privacy_policy');
 });

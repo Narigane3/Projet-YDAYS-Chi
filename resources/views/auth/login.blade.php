@@ -53,9 +53,11 @@
                             </div>
                         </div>
 
-                        <p class="mt-5 mb-3 text-muted"><a href="#"
-                                                           class="fw-bolder text-black-50 text-decoration-underline">Tu
-                                as oublié ton mot de passe ?</a></p>
+                        <p class="mt-5 mb-3 text-muted">
+                            <a href="#"
+                               class="fw-bolder text-black-50 text-decoration-underline">Tu as oublié ton mot de passe ?
+                            </a>
+                        </p>
                     </form>
                     {{-- Error handling --}}
                     @if(!$errors->isEmpty())
@@ -80,7 +82,7 @@
                             <p>et démarre ta journée avec CHI !</p>
                         </div>
                         <div class="col-auto">
-                            <button class="btn btn-outline-primary btn_switch">S'inscrire</button>
+                            <a href="/inscription" class="btn btn-outline-primary btn_switch">S'inscrire</a>
                         </div>
 
                     </div>
@@ -96,7 +98,7 @@
                         <p>et démarre ta journée avec CHI !</p>
                     </div>
                     <div class="col-auto">
-                        <button class="btn btn-outline-primary btn_switch">S'inscrire</button>
+                        <a href="/inscription" class="btn btn-outline-primary btn_switch">S'inscrire</a>
                     </div>
 
                 </div>

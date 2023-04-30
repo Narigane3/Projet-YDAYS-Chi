@@ -32,7 +32,7 @@ return [
         'string' => 'le champ :attribute doit être entre :min et :max caractères.',
     ],
     'boolean' => 'le champ :attribute doit être vrai ou faux.',
-    'confirmed' => 'le champ :attribute la confirmation ne correspond pas.',
+    'confirmed' => 'les champs :attribute ne correspond pas.',
     'current_password' => 'Le Mot de passe est incorrect.',
     'date' => 'le champ :attribute est une date incorrect .',
     'date_equals' => 'le champ :attribute doit être égal à :date.',
@@ -93,7 +93,7 @@ return [
     ],
     'max_digits' => 'le champ :attribute ne doit pas être supérieur à :max digits.',
     'mimes' => 'le champ :attribute doit être un fichier de  type: :values.',
-    'mimetypes' => 'The :attribute doit être un fichier de type: :values.',
+    'mimetypes' => 'L\' :attribute doit être un fichier de type: :values.',
     'min' => [
         'array' => 'le champ :attribute doit avoir au minimum :min objets.',
         'file' => 'le champ :attribute doit avoir au minimum :min kilobytes.',

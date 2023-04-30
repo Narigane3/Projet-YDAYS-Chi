@@ -21,7 +21,7 @@ button.w-100.btn.btn-lg.btn-primary.login {
     border-radius: 1rem;
 }
 
-#login_email, #login_password {
+#login_email, #login_password, #register_email, #register-first-name, #register-last-name, #register-username, #register-password{
     background-color: rgba(93, 133, 138, 0.20);
     border-radius: 1rem;
     color: #4a5568;
@@ -30,6 +30,11 @@ button.w-100.btn.btn-lg.btn-primary.login {
 #auth_logo {
     border-radius: 1rem;
     width: 80px;
+    margin-top: 3rem;
+}
+
+#auth_logo.register {
+    width: 110px;
     margin-top: 3rem;
 }
 
@@ -55,14 +60,25 @@ button.w-100.btn.btn-lg.btn-primary.login {
     z-index: 1;
 }
 
-button.btn.btn-outline-primary.btn_switch {
+#register-login-illustration.register {
+    background-image: url(http://[::1]:5173/public/images/illustration/illsutration_temps.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 10rem;
+    background-position-y: -4rem;
+    height: 40vh;
+    width: 30vw;
+    margin: 37vh 0 0 auto;
+}
+
+a.btn.btn-outline-primary.btn_switch {
     color: white !important;
     border-color: white !important;
     width: 100%;
     border-radius: 1rem;
 }
 
-button:hover.btn.btn-outline-primary:hover.btn_switch {
+a:hover.btn.btn-outline-primary:hover.btn_switch {
     color: #DC7528 !important;
     border-color: white !important;
     background-color: white !important;
@@ -70,7 +86,19 @@ button:hover.btn.btn-outline-primary:hover.btn_switch {
 
 .mobile_switch_content {
     padding: 3rem 0;
-    margin: 15rem 0 ;
+    margin: 15rem 0 0;
+}
+
+/*******************************/
+/********** RGPD ***************/
+/*******************************/
+
+a.rgpd_acceptation {
+    color: #DC7528;
+    font-weight: bold;
+}
+a:hover.rgpd_acceptation {
+    text-decoration: underline;
 }
 
 /*********************************/
