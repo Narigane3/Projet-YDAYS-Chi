@@ -1,6 +1,6 @@
 @extends("layouts.master")
 
-@section('title', "Blog catégorie")
+@section('title', "Blog Les protection")
 
 @section('navbar')
     @parent

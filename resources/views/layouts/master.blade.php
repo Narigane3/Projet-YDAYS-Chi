@@ -65,13 +65,13 @@
                 <h4>Service client <i class="bi bi-telephone-fill"></i></h4>
             </div>
             <div class="reinsurance-item">
-                <h4>Expedition 48h <i class="bi bi-send-fill"></i></h4>
+                <h4>Expédition 48h <i class="bi bi-send-fill"></i></h4>
             </div>
             <div class="reinsurance-item">
                 <h4>Charte qualité <i class="bi bi-hand-thumbs-up-fill"></i></h4>
             </div>
             <div class="reinsurance-item">
-                <h4> Paiement sécuriser <i class="bi bi-lock-fill"></i></h4>
+                <h4> Paiement sécurisé <i class="bi bi-lock-fill"></i></h4>
             </div>
         </div>
         {{-- NETWORK MENU FOOTER --}}
@@ -130,7 +130,7 @@
                         <ul class="list-unstyled">
                             <li><a href="{{url('blog/category/1')}}">Symptômes menstruels</a></li>
                             <li><a href="{{url('blog/category/2')}}">Les protections</a></li>
-                            <li><a href="{{url('blog/category/3')}}">Vivre avec ces règles</a></li>
+                            <li><a href="{{url('blog/category/3')}}">Vivre avec ses règles</a></li>
                         </ul>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                             <ul class="list-unstyled">
                                 <li><a href="{{url('blog/category/1')}}">Symptômes menstruels</a></li>
                                 <li><a href="{{url('blog/category/2')}}">Les protections</a></li>
-                                <li><a href="{{url('blog/category/3')}}">Vivre avec ces règles</a></li>
+                                <li><a href="{{url('blog/category/3')}}">Vivre avec ses règles</a></li>
                             </ul>
                         </div>
                     </div>
@@ -229,9 +229,9 @@
         {{-- SUB MENU FOOTER --}}
         <div class="menu_footer_3">
             <div class="text-center"><a href="/conditions-generales-d-utilisation"
-                                        class="link_menu_footer">Mention légales</a></div>
+                                        class="link_menu_footer">Mentions légales</a></div>
             <div class="text-center"><a href="/conditions-generales-d-utilisation#Conditions_utilisation"
-                                        class="link_menu_footer">Condition générales d'utilisation</a></div>
+                                        class="link_menu_footer">Conditions générales d'utilisation</a></div>
             <div class="text-center"><a href="/politique-de-confidentialite" class="link_menu_footer">Données
                     personnelles</a></div>
         </div>

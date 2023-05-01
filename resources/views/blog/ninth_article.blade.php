@@ -1,13 +1,13 @@
 @extends("layouts.master")
 
-@section('title', "Blog article")
+@section('title', "Blog Les règles et le travail : comment mieux gérer son cycle menstruel au bureau")
 
 @section('navbar')
     @parent
 @stop
 
 @section('content')
-    <div class="art-category-title">Vivre avec ces règles</div>
+    <div class="art-category-title">Vivre avec ses règles</div>
     <div class="cat-texte-mobile" style="margin-right: 10%">
         <strong>Les règles et le travail : comment mieux gérer son cycle menstruel au bureau</strong>
     </div>
@@ -181,7 +181,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{ url("/images/blog/sport.jpg") }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Vivre avec ces règles</h5>
+                        <h5 class="card-title">Vivre avec ses règles</h5>
                         <p class="card-text">Le sport et les règles : comment bien s’entraîner pendant cette période
                             ?</p>
                         <div class="card-date">Le 05 décembre 2022</div>

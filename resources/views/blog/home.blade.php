@@ -37,7 +37,7 @@
 
             <a href="/blog/category/3">
                 <div class="card-full-img img-vivre-regles img-size">
-                    <h3 class="title-card-full-img">Vivre avec ces règles</h3>
+                    <h3 class="title-card-full-img">Vivre avec ses règles</h3>
                     <span class="badge rounded-pill text-bg-primary badge-voir">Voir</span>
                 </div>
             </a>
@@ -75,7 +75,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{ url("/images/blog/sport.jpg") }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Vivre avec ces règles</h5>
+                        <h5 class="card-title">Vivre avec ses règles</h5>
                         <p class="card-text">Le sport et les règles : comment bien s’entraîner pendant cette période ?</p>
                         <div class="card-date">Le 05 décembre 2022</div>
                     </div>

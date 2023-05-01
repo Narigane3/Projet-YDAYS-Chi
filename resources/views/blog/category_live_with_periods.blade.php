@@ -1,6 +1,6 @@
 @extends("layouts.master")
 
-@section('title', "Blog catégorie")
+@section('title', "Blog Vivre avec ses règles")
 
 @section('navbar')
     @parent
@@ -9,11 +9,11 @@
 @section('content')
     <div class="home-desktop" style="padding: 0; margin-top: 135px">
         <div class="cat-img img-vivre-regles">
-            <div class="cat-texte"><strong>Vivre avec ces règles</strong></div>
+            <div class="cat-texte"><strong>Vivre avec ses règles</strong></div>
         </div>
     </div>
     <div class="home-mobile">
-        <div class="cat-texte-mobile"><strong>Vivre avec ces règles</strong></div>
+        <div class="cat-texte-mobile"><strong>Vivre avec ses règles</strong></div>
         <div class="cat-img img-vivre-regles"></div>
     </div>
 
@@ -22,7 +22,7 @@
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-sport cat-article-img"></div>
                 <div class="cat-col-8">
-                    <div class="cat-categorie-article-title">Vivre avec ces règles</div>
+                    <div class="cat-categorie-article-title">Vivre avec ses règles</div>
                     <div class="cat-article-title">
                         <strong>Le sport et les règles : comment bien s’entraîner pendant cette période ?</strong>
                     </div>
@@ -39,7 +39,7 @@
             <div class="card category-card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ url("/images/blog/sport.jpg") }}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Vivre avec ces règles</h5>
+                    <h5 class="card-title">Vivre avec ses règles</h5>
                     <h5 class="card-title-category">Le sport et les règles : comment bien s’entraîner pendant cette
                         période ?</h5>
                     <p class="card-text-category">Vous pratiquez une activité sportive régulièrement et vous redoutez
@@ -56,7 +56,7 @@
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-voyage cat-article-img"></div>
                 <div class="cat-col-8">
-                    <div class="cat-categorie-article-title">Vivre avec ces règles</div>
+                    <div class="cat-categorie-article-title">Vivre avec ses règles</div>
                     <div class="cat-article-title">
                         <strong>Voyager pendant les règles : comment s’organiser pour un voyage serein</strong>
                     </div>
@@ -73,7 +73,7 @@
             <div class="card category-card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ url("/images/blog/voyage.jpg") }}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Vivre avec ces règles</h5>
+                    <h5 class="card-title">Vivre avec ses règles</h5>
                     <h5 class="card-title-category">Voyager pendant les règles : comment s’organiser pour un voyage
                         serein</h5>
                     <p class="card-text-category">Les voyages sont souvent source de stress, mais encore plus lorsqu’on
@@ -90,7 +90,7 @@
             <div class="cat-row">
                 <div class="cat-col-2 cat-article-img-regles-travail cat-article-img"></div>
                 <div class="cat-col-8">
-                    <div class="cat-categorie-article-title">Vivre avec ces règles</div>
+                    <div class="cat-categorie-article-title">Vivre avec ses règles</div>
                     <div class="cat-article-title">
                         <strong>Les règles et le travail : comment mieux gérer son cycle menstruel au bureau</strong>
                     </div>
@@ -107,7 +107,7 @@
             <div class="card category-card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ url("/images/blog/regles_travail.jpg") }}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Vivre avec ces règles</h5>
+                    <h5 class="card-title">Vivre avec ses règles</h5>
                     <h5 class="card-title-category">Les règles et le travail : comment mieux gérer son cycle menstruel
                         au bureau</h5>
                     <p class="card-text-category">Vous avez du mal à gérer votre cycle menstruel au travail ? Entre les

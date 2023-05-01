@@ -1,6 +1,7 @@
 @extends("layouts.master")
 
-@section('title', "Blog article")
+@section('title', "Comment prévenir et gérer les sauts d’humeur pendant
+            les règles ?")
 
 @section('navbar')
     @parent
@@ -116,10 +117,11 @@
 
             <a href="/blog/article/4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ url("/images/blog/coupe_menstruelle.jpg") }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ url("/images/blog/coupe_menstruelle.jpg") }}"
+                         alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Les protections</h5>
-                        <p class="card-text">Les protections menstruelles : lesquelles choisir  ?</p>
+                        <p class="card-text">Les protections menstruelles : lesquelles choisir ?</p>
                         <div class="card-date">Le 05 décembre 2022</div>
                     </div>
                 </div>
@@ -130,7 +132,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{ url("/images/blog/sport.jpg") }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Vivre avec ces règles</h5>
+                        <h5 class="card-title">Vivre avec ses règles</h5>
                         <p class="card-text">Le sport et les règles : comment bien s’entraîner pendant cette période ?</p>
                         <div class="card-date">Le 05 décembre 2022</div>
                     </div>

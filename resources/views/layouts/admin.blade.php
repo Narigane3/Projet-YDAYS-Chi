@@ -58,6 +58,12 @@
                         <li>
                             <hr>
                         </li>
+                        <li>
+                            <a href="/admin/newsletter/" class="nav-link link-dark">
+                                <i class="bi bi-person-lines-fill me-2"></i>
+                                Gestion des contacts
+                            </a>
+                        </li>
 
                         <li>
                             <a href="/admin/users/" class="nav-link link-dark">
