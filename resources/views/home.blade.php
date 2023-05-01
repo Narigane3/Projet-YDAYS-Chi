@@ -14,6 +14,9 @@
 @stop
 
 @section('content')
+
+    {{-- home page --}}
+
     <div class="master_content">
 
         <section id="home_header">
@@ -236,17 +239,21 @@
                     <div class="join_now_title text-center">
                         <h2>Rejoignez nous !</h2>
                     </div>
-                    <form>
+                    <form id="contact_form" action="/add/new/contact/" method="post">
+                        @csrf
                         <div class="mb-3">
-                            <input type="password" class="form-control input_prenom" placeholder="Prénom">
+                            <input type="text" name="name" class="form-control input_prenom" placeholder="Prénom"
+                                   id="lastname">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control input_email" placeholder="@">
+                            <input type="email" name="email" class="form-control input_email" placeholder="@"
+                                   id="email">
                         </div>
                         <div class="mb-3">
                             <div class="form-check join_now_rpg_content">
-                                <input type="checkbox" class="form-check-input rgpd_acceptation">
-                                <label class="form-check-label join_now_rpg" for="rgpd_acceptation">j'accepte
+                                <input type="checkbox" name="rgpd" class="form-check-input rgpd_acceptation"
+                                       id="rgpd_acceptation">
+                                <label class="form-check-label join_now_rpg" for="rgpd_acceptation">J'accepte
                                     l'utilisation
                                     des données conformément à notre
                                     <a href="/politique-de-confidentialite" class="d-inline-block"
@@ -260,7 +267,8 @@
                 </div>
             </div>
         </section>
-
+        {{-- contact popup --}}
+        @include('partials.popup')
         <section class="actu d-flex align-items-center flex-column">
             <div class="actu_title text-center m-5">
                 <h2>Nos derniers <span class="d-block">articles</span></h2>

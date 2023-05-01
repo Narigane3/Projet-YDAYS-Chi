@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +60,9 @@ Route::get("/blog/article/{article_id}", function ($article_id) {
     };
 });
 
+// Newsletter create
+Route::post('/add/new/contact/', [NewsletterController::class, 'store']);
+
 // REDIRECT USER AFTER THE LOG
 Route::middleware(\App\Http\Middleware\RoleRooting::class,)->group(function () {
     Route::get('/home', function () {
@@ -71,7 +75,16 @@ Route::middleware(\App\Http\Middleware\HasRole::class)->group(function () {
     Route::get('/admin', function () {
         return view('admin.home');
     });
-
+    //*************
+    // NEWSLETTER
+    Route::get('/admin/newsletter', [NewsletterController::class, 'index']);
+    // Newsletter search
+    Route::get('/admin/newsletter/search', [NewsletterController::class, 'search']);
+    Route::post('/admin/newsletter/search', [NewsletterController::class, 'search']);
+    // Newsletter export
+    Route::get('/admin/newsletter/export', [NewsletterController::class, 'export']);
+    // Newsletter delete
+    Route::post('/admin/newsletter/delete/', [NewsletterController::class, 'destroy']);
 
 });
 
